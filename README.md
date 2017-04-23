@@ -6,7 +6,7 @@ Copy of Apple iOS AppStore review feedback popup.
 
 good | bad
 --- | ---
-![good](https://raw.githubusercontent.com/mono0926/NativePopup/master/Screenshots/good.PNG) | ![bad](https://raw.githubusercontent.com/mono0926/NativePopup/master/Screenshots/bad.PNG)
+![good](https://raw.githubusercontent.com/mono0926/NativePopup/master/Screenshots/original_good.PNG) | ![bad](https://raw.githubusercontent.com/mono0926/NativePopup/master/Screenshots/original_bad.PNG)
 
 
 
