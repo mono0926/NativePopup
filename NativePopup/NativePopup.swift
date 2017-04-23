@@ -119,7 +119,8 @@ public class NativePopup: UIView {
                 // TODO: adjust animation
                 UIView.animate(withDuration: 0.2,
                                animations: {
-                                self.alpha = 0
+                                // for visual effecto view smooth animation
+                                self.subviews.forEach { $0.alpha = 0 }
                                 self.transform = self.transform.scaledBy(x: 0.8, y: 0.8)
                 },
                                completion: { finished in
