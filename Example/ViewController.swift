@@ -32,12 +32,12 @@ class ViewController: UIViewController {
                          message: "フィードバックをありがとう\nございました。")
     }
     @IBAction func goodDidTap(_ sender: UIButton) {
-        NativePopup.show(image: NativePopup.FeedbackImage.good,
+        NativePopup.show(image: NativePopup.Image.Feedback.good,
                          title: "Helpful",
                          message: "Thanks for your feedback.")
     }
     @IBAction func badDidTap(_ sender: UIButton) {
-        NativePopup.show(image: NativePopup.FeedbackImage.bad,
+        NativePopup.show(image: NativePopup.Image.Feedback.bad,
                          title: "Not Helpful",
                          message: "Thanks for your feedback.")
     }

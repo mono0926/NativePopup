@@ -8,12 +8,19 @@
 
 import Foundation
 
+private func createUIImage(named name: String) -> UIImage {
+    return UIImage(named: name, in: Bundle(for: NativePopup.self), compatibleWith: nil)!
+}
+
 extension NativePopup {
-    public enum FeedbackImage: String, HavingUIImageName {
-        case
-        good,
-        bad
-        
-        public var imageName: String { return "feedback_\(rawValue)" }
+    public struct Image {
+        private init() {}
+        public enum Feedback: String, UIImageConvertible {
+            case
+            good,
+            bad
+
+            public var image: UIImage { return createUIImage(named: "feedback_\(rawValue)") }
+        }
     }
 }

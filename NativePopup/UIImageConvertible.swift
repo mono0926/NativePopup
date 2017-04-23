@@ -16,11 +16,3 @@ public protocol UIImageConvertible {
 extension UIImage: UIImageConvertible {
     public var image: UIImage { return self }
 }
-
-public protocol HavingUIImageName: UIImageConvertible {
-    var imageName: String { get }
-}
-
-extension HavingUIImageName {
-    public var image: UIImage { return UIImage.init(named: imageName, in: Bundle(for: NativePopup.self), compatibleWith: nil)! }
-}
