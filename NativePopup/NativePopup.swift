@@ -16,7 +16,6 @@ public class NativePopup: UIView {
     public static func show(image: UIImageConvertible, title: String, message: String?) {
         let view = NativePopup(image: image, title: title, message: message)
         view.show()
-        currentView = view
     }
 
     public required init(coder aDecoder: NSCoder) {
@@ -95,6 +94,7 @@ public class NativePopup: UIView {
         let window = type(of: self).keyWindow
         // TODO: need to remove?
         type(of: self).currentView?.removeFromSuperview()
+        type(of: self).currentView = self
         window.addSubview(self)
         widthAnchor.constraint(equalToConstant: 250).isActive = true
         centerXAnchor.constraint(equalTo: window.centerXAnchor).isActive = true
