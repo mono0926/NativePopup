@@ -9,41 +9,10 @@
 import Foundation
 import UIKit
 
-
 public class NativePopup: UIView {
 
     private static let keyWindow = UIApplication.shared.keyWindow!
     private weak static var currentView: NativePopup?
-
-    public enum Image {
-        case
-        good,
-        bad,
-        custom(image: UIImage)
-
-        fileprivate var image: UIImage {
-            switch self {
-            case .good: return type(of: self).createImage(named: "good")
-            case .bad: return type(of: self).createImage(named: "bad")
-            case .custom(let image): return image
-            }
-        }
-
-        private static func createImage(named: String) -> UIImage {
-            return UIImage.init(named: named, in: Bundle(for: NativePopup.self), compatibleWith: nil)!
-        }
-    }
-
-    public struct Info {
-        public let image: Image
-        public let title: String
-        public let message: String?
-        public init(image: Image, title: String, message: String?) {
-            self.image = image
-            self.title = title
-            self.message = message
-        }
-    }
 
     public static func show(info: Info) {
         let view = NativePopup(info: info)
