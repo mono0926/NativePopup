@@ -22,27 +22,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1Qd-4G-b8f">
-                                <rect key="frame" x="137.5" y="40" width="100" height="90"/>
+                                <rect key="frame" x="132.5" y="40" width="110" height="120"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXq-6g-Fy7">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="30"/>
                                         <state key="normal" title="Custom Image"/>
                                         <connections>
                                             <action selector="customDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q1J-q8-jEy"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zg-8M-9po">
-                                        <rect key="frame" x="0.0" y="30" width="100" height="30"/>
+                                        <rect key="frame" x="0.0" y="30" width="110" height="30"/>
                                         <state key="normal" title="Good"/>
                                         <connections>
                                             <action selector="goodDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y6l-xd-3pS"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fw-rY-gmt">
-                                        <rect key="frame" x="0.0" y="60" width="100" height="30"/>
+                                        <rect key="frame" x="0.0" y="60" width="110" height="30"/>
                                         <state key="normal" title="Bad"/>
                                         <connections>
                                             <action selector="badDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3HN-2P-cQG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGk-f6-FDy">
+                                        <rect key="frame" x="0.0" y="90" width="110" height="30"/>
+                                        <state key="normal" title="Empty Message"/>
+                                        <connections>
+                                            <action selector="badDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dht-vI-KuR"/>
+                                            <action selector="emptyMessageDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5aC-RM-lb4"/>
                                         </connections>
                                     </button>
                                 </subviews>

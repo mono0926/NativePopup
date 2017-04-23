@@ -41,5 +41,10 @@ class ViewController: UIViewController {
                          title: "Not Helpful",
                          message: "Thanks for your feedback.")
     }
+    @IBAction func emptyMessageDidTap(_ sender: UIButton) {
+        NativePopup.show(image: NativePopup.Image.Feedback.good,
+                         title: "Empty Message 🗑",
+                         message: nil)
+    }
 }
 
