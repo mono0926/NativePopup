@@ -126,7 +126,7 @@ public class NativePopup: UIView {
 
     private func show() {
         let window = type(of: self).keyWindow
-        // 消すか迷う
+        // TODO: need to remove?
         for v in window.subviews where v is NativePopup { v.removeFromSuperview() }
         window.addSubview(self)
         widthAnchor.constraint(equalToConstant: 250).isActive = true
