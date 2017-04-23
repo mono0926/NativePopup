@@ -8,12 +8,54 @@
 
 /* Begin PBXBuildFile section */
 		FE8533901EAC7C92004BB756 /* NativePopup.h in Headers */ = {isa = PBXBuildFile; fileRef = FE85338E1EAC7C92004BB756 /* NativePopup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FECA87BA1EAC7CCF00D07CB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA87B91EAC7CCF00D07CB1 /* AppDelegate.swift */; };
+		FECA87BC1EAC7CCF00D07CB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA87BB1EAC7CCF00D07CB1 /* ViewController.swift */; };
+		FECA87BF1EAC7CCF00D07CB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FECA87BD1EAC7CCF00D07CB1 /* Main.storyboard */; };
+		FECA87C11EAC7CCF00D07CB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FECA87C01EAC7CCF00D07CB1 /* Assets.xcassets */; };
+		FECA87C41EAC7CCF00D07CB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FECA87C21EAC7CCF00D07CB1 /* LaunchScreen.storyboard */; };
+		FECA87D81EAC7D9E00D07CB1 /* NativePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA87D71EAC7D9E00D07CB1 /* NativePopup.swift */; };
+		FECA87D91EAC87B700D07CB1 /* NativePopup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE85338B1EAC7C92004BB756 /* NativePopup.framework */; };
+		FECA87DA1EAC87B700D07CB1 /* NativePopup.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FE85338B1EAC7C92004BB756 /* NativePopup.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FECA87DF1EAC94B300D07CB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FECA87DE1EAC94B300D07CB1 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FECA87DB1EAC87B700D07CB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE8533821EAC7C92004BB756 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE85338A1EAC7C92004BB756;
+			remoteInfo = NativePopup;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FECA87DD1EAC87B700D07CB1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FECA87DA1EAC87B700D07CB1 /* NativePopup.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FE85338B1EAC7C92004BB756 /* NativePopup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NativePopup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE85338E1EAC7C92004BB756 /* NativePopup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NativePopup.h; sourceTree = "<group>"; };
 		FE85338F1EAC7C92004BB756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FECA87B71EAC7CCF00D07CB1 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FECA87B91EAC7CCF00D07CB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FECA87BB1EAC7CCF00D07CB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FECA87BE1EAC7CCF00D07CB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FECA87C01EAC7CCF00D07CB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FECA87C31EAC7CCF00D07CB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FECA87C51EAC7CCF00D07CB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FECA87D71EAC7D9E00D07CB1 /* NativePopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativePopup.swift; sourceTree = "<group>"; };
+		FECA87DE1EAC94B300D07CB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,6 +66,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FECA87B41EAC7CCF00D07CB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FECA87D91EAC87B700D07CB1 /* NativePopup.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -31,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				FE85338D1EAC7C92004BB756 /* NativePopup */,
+				FECA87B81EAC7CCF00D07CB1 /* Example */,
 				FE85338C1EAC7C92004BB756 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -39,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				FE85338B1EAC7C92004BB756 /* NativePopup.framework */,
+				FECA87B71EAC7CCF00D07CB1 /* Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,8 +100,23 @@
 			children = (
 				FE85338E1EAC7C92004BB756 /* NativePopup.h */,
 				FE85338F1EAC7C92004BB756 /* Info.plist */,
+				FECA87D71EAC7D9E00D07CB1 /* NativePopup.swift */,
+				FECA87DE1EAC94B300D07CB1 /* Assets.xcassets */,
 			);
 			path = NativePopup;
+			sourceTree = "<group>";
+		};
+		FECA87B81EAC7CCF00D07CB1 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				FECA87B91EAC7CCF00D07CB1 /* AppDelegate.swift */,
+				FECA87BB1EAC7CCF00D07CB1 /* ViewController.swift */,
+				FECA87BD1EAC7CCF00D07CB1 /* Main.storyboard */,
+				FECA87C01EAC7CCF00D07CB1 /* Assets.xcassets */,
+				FECA87C21EAC7CCF00D07CB1 /* LaunchScreen.storyboard */,
+				FECA87C51EAC7CCF00D07CB1 /* Info.plist */,
+			);
+			path = Example;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,16 +151,41 @@
 			productReference = FE85338B1EAC7C92004BB756 /* NativePopup.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		FECA87B61EAC7CCF00D07CB1 /* Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FECA87D11EAC7CCF00D07CB1 /* Build configuration list for PBXNativeTarget "Example" */;
+			buildPhases = (
+				FECA87B31EAC7CCF00D07CB1 /* Sources */,
+				FECA87B41EAC7CCF00D07CB1 /* Frameworks */,
+				FECA87B51EAC7CCF00D07CB1 /* Resources */,
+				FECA87DD1EAC87B700D07CB1 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FECA87DC1EAC87B700D07CB1 /* PBXTargetDependency */,
+			);
+			name = Example;
+			productName = Example;
+			productReference = FECA87B71EAC7CCF00D07CB1 /* Example.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		FE8533821EAC7C92004BB756 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = mono;
 				TargetAttributes = {
 					FE85338A1EAC7C92004BB756 = {
+						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+					FECA87B61EAC7CCF00D07CB1 = {
 						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -105,6 +197,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = FE8533811EAC7C92004BB756;
 			productRefGroup = FE85338C1EAC7C92004BB756 /* Products */;
@@ -112,6 +205,7 @@
 			projectRoot = "";
 			targets = (
 				FE85338A1EAC7C92004BB756 /* NativePopup */,
+				FECA87B61EAC7CCF00D07CB1 /* Example */,
 			);
 		};
 /* End PBXProject section */
@@ -121,6 +215,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FECA87DF1EAC94B300D07CB1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FECA87B51EAC7CCF00D07CB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FECA87C41EAC7CCF00D07CB1 /* LaunchScreen.storyboard in Resources */,
+				FECA87C11EAC7CCF00D07CB1 /* Assets.xcassets in Resources */,
+				FECA87BF1EAC7CCF00D07CB1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,10 +236,47 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FECA87D81EAC7D9E00D07CB1 /* NativePopup.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FECA87B31EAC7CCF00D07CB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FECA87BC1EAC7CCF00D07CB1 /* ViewController.swift in Sources */,
+				FECA87BA1EAC7CCF00D07CB1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FECA87DC1EAC87B700D07CB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE85338A1EAC7C92004BB756 /* NativePopup */;
+			targetProxy = FECA87DB1EAC87B700D07CB1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FECA87BD1EAC7CCF00D07CB1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FECA87BE1EAC7CCF00D07CB1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FECA87C21EAC7CCF00D07CB1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FECA87C31EAC7CCF00D07CB1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FE8533911EAC7C92004BB756 /* Debug */ = {
@@ -241,6 +383,27 @@
 		FE8533941EAC7C92004BB756 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NativePopup/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mono0926.NativePopup;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		FE8533951EAC7C92004BB756 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -254,22 +417,32 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
-			name = Debug;
+			name = Release;
 		};
-		FE8533951EAC7C92004BB756 /* Release */ = {
+		FECA87D21EAC7CCF00D07CB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = NativePopup/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mono0926.NativePopup;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Example/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mono0926.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		FECA87D31EAC7CCF00D07CB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Example/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mono0926.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -294,6 +467,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		FECA87D11EAC7CCF00D07CB1 /* Build configuration list for PBXNativeTarget "Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FECA87D21EAC7CCF00D07CB1 /* Debug */,
+				FECA87D31EAC7CCF00D07CB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
