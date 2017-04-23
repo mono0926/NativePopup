@@ -27,19 +27,19 @@ class ViewController: UIViewController {
     }
 
     @IBAction func customDidTap(_ sender: UIButton) {
-        NativePopup.show(info: NativePopup.Info(image: NativePopup.Image.custom(image: UIImage(named: "love")!),
-                                                title: "参考になった",
-                                                message: "フィードバックをありがとう\nございました。"))
+        NativePopup.show(image: UIImage(named: "love")!,
+                         title: "参考になった",
+                         message: "フィードバックをありがとう\nございました。")
     }
     @IBAction func goodDidTap(_ sender: UIButton) {
-        NativePopup.show(info: NativePopup.Info(image: NativePopup.Image.good,
-                                                title: "Helpful",
-                                                message: "Thanks for your feedback."))
+        NativePopup.show(image: NativePopup.FeedbackImage.good,
+                         title: "Helpful",
+                         message: "Thanks for your feedback.")
     }
     @IBAction func badDidTap(_ sender: UIButton) {
-        NativePopup.show(info: NativePopup.Info(image: NativePopup.Image.bad,
-                                                title: "Not Helpful",
-                                                message: "Thanks for your feedback."))
+        NativePopup.show(image: NativePopup.FeedbackImage.bad,
+                         title: "Not Helpful",
+                         message: "Thanks for your feedback.")
     }
 }
 

@@ -10,12 +10,11 @@ import Foundation
 import UIKit
 
 public class NativePopup: UIView {
-
     private static let keyWindow = UIApplication.shared.keyWindow!
-    private weak static var currentView: NativePopup?
+    fileprivate weak static var currentView: NativePopup?
 
-    public static func show(info: Info) {
-        let view = NativePopup(info: info)
+    public static func show(image: UIImageConvertible, title: String, message: String?) {
+        let view = NativePopup(image: image, title: title, message: message)
         view.show()
         currentView = view
     }
@@ -24,7 +23,7 @@ public class NativePopup: UIView {
         fatalError("should not be called")
     }
 
-    private init(info: Info) {
+    private init(image: UIImageConvertible, title: String, message: String?) {
         super.init(frame: CGRect.zero)
 
         layer.cornerRadius = 8
@@ -32,22 +31,21 @@ public class NativePopup: UIView {
 
         isUserInteractionEnabled = false
 
-        let image = info.image.image
+        let image = image.image
         let imageView = UIImageView(image: image)
         assert(image.size.width == image.size.height, "Aspect ratio should be 1:1.")
         imageView.contentMode = .scaleAspectFit
-        if case .custom = info.image {
-            imageView.layer.cornerRadius = 6
-            imageView.clipsToBounds = true
-        }
+
+        imageView.layer.cornerRadius = 6
+        imageView.clipsToBounds = true
 
         let titleLabel = UILabel()
-        titleLabel.text = info.title
+        titleLabel.text = title
         // not dynamic size
         titleLabel.font = UIFont.boldSystemFont(ofSize: 20)
 
         let messageLabel = UILabel()
-        messageLabel.text = info.message
+        messageLabel.text = message
         messageLabel.font = UIFont.systemFont(ofSize: 15)
 
         [titleLabel, messageLabel].forEach {
@@ -80,7 +78,7 @@ public class NativePopup: UIView {
         titleLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: sideSpace).isActive = true
 
         let bottomSpace: CGFloat = 28
-        if info.message?.isEmpty ?? true {
+        if message?.isEmpty ?? true {
             titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -bottomSpace).isActive = true
         } else {
             addSubview(messageLabel)
@@ -96,7 +94,7 @@ public class NativePopup: UIView {
     private func show() {
         let window = type(of: self).keyWindow
         // TODO: need to remove?
-        for v in window.subviews where v is NativePopup { v.removeFromSuperview() }
+        type(of: self).currentView?.removeFromSuperview()
         window.addSubview(self)
         widthAnchor.constraint(equalToConstant: 250).isActive = true
         centerXAnchor.constraint(equalTo: window.centerXAnchor).isActive = true
