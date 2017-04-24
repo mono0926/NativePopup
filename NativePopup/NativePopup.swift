@@ -42,11 +42,11 @@ public class NativePopup: UIView {
         case .emoji(let character):
             let label = UILabel()
             label.text = String(character)
-            label.font = UIFont.systemFont(ofSize: 100)
-            label.clipsToBounds = false
+            label.font = UIFont.systemFont(ofSize: 120)
             label.textAlignment = .center
-            label.lineBreakMode = .byCharWrapping
-            imageView = label
+            imageView = UIView()
+            imageView.np.addSubviewCenter(label)
+            imageView.clipsToBounds = false
             break
         }
 
