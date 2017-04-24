@@ -69,11 +69,7 @@ public class NativePopup: UIView {
         }
 
         let effectView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
-        addSubview(effectView)
-        effectView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        effectView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        effectView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
-        effectView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        np.addSubview(effectView)
 
         addSubview(imageView)
         addSubview(titleLabel)

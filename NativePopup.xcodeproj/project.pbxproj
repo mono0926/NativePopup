@@ -20,6 +20,8 @@
 		FECA87E11EACC77800D07CB1 /* NativePopup.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA87E01EACC77800D07CB1 /* NativePopup.extension.swift */; };
 		FECA87E31EACC7F000D07CB1 /* UIImageConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA87E21EACC7F000D07CB1 /* UIImageConvertible.swift */; };
 		FECA87EE1EADAC3800D07CB1 /* Bundle.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA87ED1EADAC3800D07CB1 /* Bundle.extension.swift */; };
+		FECA87F01EADB80700D07CB1 /* UIView.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA87EF1EADB80700D07CB1 /* UIView.extension.swift */; };
+		FECA87F21EADBA3C00D07CB1 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA87F11EADBA3C00D07CB1 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		FECA87E01EACC77800D07CB1 /* NativePopup.extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativePopup.extension.swift; sourceTree = "<group>"; };
 		FECA87E21EACC7F000D07CB1 /* UIImageConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageConvertible.swift; sourceTree = "<group>"; };
 		FECA87ED1EADAC3800D07CB1 /* Bundle.extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bundle.extension.swift; sourceTree = "<group>"; };
+		FECA87EF1EADB80700D07CB1 /* UIView.extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.extension.swift; sourceTree = "<group>"; };
+		FECA87F11EADBA3C00D07CB1 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 				FECA87E21EACC7F000D07CB1 /* UIImageConvertible.swift */,
 				FECA87DE1EAC94B300D07CB1 /* Assets.xcassets */,
 				FECA87ED1EADAC3800D07CB1 /* Bundle.extension.swift */,
+				FECA87EF1EADB80700D07CB1 /* UIView.extension.swift */,
+				FECA87F11EADBA3C00D07CB1 /* Extension.swift */,
 			);
 			path = NativePopup;
 			sourceTree = "<group>";
@@ -245,8 +251,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FECA87F01EADB80700D07CB1 /* UIView.extension.swift in Sources */,
 				FECA87E11EACC77800D07CB1 /* NativePopup.extension.swift in Sources */,
 				FECA87E31EACC7F000D07CB1 /* UIImageConvertible.swift in Sources */,
+				FECA87F21EADBA3C00D07CB1 /* Extension.swift in Sources */,
 				FECA87EE1EADAC3800D07CB1 /* Bundle.extension.swift in Sources */,
 				FECA87D81EAC7D9E00D07CB1 /* NativePopup.swift in Sources */,
 			);
