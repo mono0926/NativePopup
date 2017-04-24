@@ -47,7 +47,6 @@ public class NativePopup: UIView {
             imageView = UIView()
             imageView.np.addSubviewCenter(label)
             imageView.clipsToBounds = false
-            break
         }
 
         let titleLabel = UILabel()
