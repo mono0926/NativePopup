@@ -22,6 +22,7 @@
 		FECA87EE1EADAC3800D07CB1 /* Bundle.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA87ED1EADAC3800D07CB1 /* Bundle.extension.swift */; };
 		FECA87F01EADB80700D07CB1 /* UIView.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA87EF1EADB80700D07CB1 /* UIView.extension.swift */; };
 		FECA87F21EADBA3C00D07CB1 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA87F11EADBA3C00D07CB1 /* Extension.swift */; };
+		FECA87F51EADBD7F00D07CB1 /* UIImage.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA87F41EADBD7F00D07CB1 /* UIImage.extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		FECA87ED1EADAC3800D07CB1 /* Bundle.extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bundle.extension.swift; sourceTree = "<group>"; };
 		FECA87EF1EADB80700D07CB1 /* UIView.extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.extension.swift; sourceTree = "<group>"; };
 		FECA87F11EADBA3C00D07CB1 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		FECA87F41EADBD7F00D07CB1 /* UIImage.extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				FECA87E01EACC77800D07CB1 /* NativePopup.extension.swift */,
 				FECA87ED1EADAC3800D07CB1 /* Bundle.extension.swift */,
 				FECA87EF1EADB80700D07CB1 /* UIView.extension.swift */,
+				FECA87F41EADBD7F00D07CB1 /* UIImage.extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FECA87F01EADB80700D07CB1 /* UIView.extension.swift in Sources */,
+				FECA87F51EADBD7F00D07CB1 /* UIImage.extension.swift in Sources */,
 				FECA87E11EACC77800D07CB1 /* NativePopup.extension.swift in Sources */,
 				FECA87E31EACC7F000D07CB1 /* UIImageConvertible.swift in Sources */,
 				FECA87F21EADBA3C00D07CB1 /* Extension.swift in Sources */,

@@ -17,10 +17,7 @@ extension NativePopup {
             bad
 
             public var image: Image {
-                return Image.image(UIImage(
-                    named: "feedback_\(rawValue)",
-                    in: .nativePopup,
-                    compatibleWith: nil)!)
+                return .image(UIImage.init(nativePopupNamed: "feedback_\(rawValue)"))
             }
         }
     }
