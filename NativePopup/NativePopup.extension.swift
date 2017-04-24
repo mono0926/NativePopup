@@ -9,18 +9,18 @@
 import Foundation
 
 extension NativePopup {
-    public struct Image {
+    public struct Preset {
         private init() {}
-        public enum Feedback: String, UIImageConvertible {
+        public enum Feedback: String, ImageConvertible {
             case
             good,
             bad
 
-            public var image: UIImage {
-                return UIImage(
+            public var image: Image {
+                return Image.image(UIImage(
                     named: "feedback_\(rawValue)",
                     in: .nativePopup,
-                    compatibleWith: nil)!
+                    compatibleWith: nil)!)
             }
         }
     }

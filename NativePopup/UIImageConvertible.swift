@@ -9,10 +9,15 @@
 import Foundation
 import UIKit
 
-public protocol UIImageConvertible {
-    var image: UIImage { get }
+public enum Image {
+    case image(UIImage)
+    case emoji(Character)
 }
 
-extension UIImage: UIImageConvertible {
-    public var image: UIImage { return self }
+public protocol ImageConvertible {
+    var image: Image { get }
+}
+
+extension UIImage: ImageConvertible {
+    public var image: Image { return .image(self) }
 }

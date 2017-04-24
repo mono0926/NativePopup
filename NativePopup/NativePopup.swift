@@ -13,7 +13,7 @@ public class NativePopup: UIView {
     private static let keyWindow = UIApplication.shared.keyWindow!
     fileprivate weak static var currentView: NativePopup?
 
-    public static func show(image: UIImageConvertible, title: String, message: String?) {
+    public static func show(image: ImageConvertible, title: String, message: String?) {
         let view = NativePopup(image: image, title: title, message: message)
         view.show()
     }
@@ -22,7 +22,7 @@ public class NativePopup: UIView {
         fatalError("should not be called")
     }
 
-    private init(image: UIImageConvertible, title: String, message: String?) {
+    private init(image: ImageConvertible, title: String, message: String?) {
         super.init(frame: CGRect.zero)
 
         layer.cornerRadius = 8
@@ -31,12 +31,19 @@ public class NativePopup: UIView {
         isUserInteractionEnabled = false
 
         let image = image.image
-        let imageView = UIImageView(image: image)
-        assert(image.size.width == image.size.height, "Aspect ratio should be 1:1.")
-        imageView.contentMode = .scaleAspectFit
-
-        imageView.layer.cornerRadius = 6
-        imageView.clipsToBounds = true
+        let imageView: UIView
+        switch image {
+        case .image(let image):
+            imageView = UIImageView(image: image)
+            assert(image.size.width == image.size.height, "Aspect ratio should be 1:1.")
+            imageView.contentMode = .scaleAspectFit
+            imageView.layer.cornerRadius = 6
+            imageView.clipsToBounds = true
+        case .emoji(let character):
+            imageView = UILabel()
+            // TODO
+            break
+        }
 
         let titleLabel = UILabel()
         titleLabel.text = title

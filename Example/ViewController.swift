@@ -32,17 +32,17 @@ class ViewController: UIViewController {
                          message: "フィードバックをありがとう\nございました。")
     }
     @IBAction func goodDidTap(_ sender: UIButton) {
-        NativePopup.show(image: NativePopup.Image.Feedback.good,
+        NativePopup.show(image: NativePopup.Preset.Feedback.good,
                          title: "Helpful",
                          message: "Thanks for your feedback.")
     }
     @IBAction func badDidTap(_ sender: UIButton) {
-        NativePopup.show(image: NativePopup.Image.Feedback.bad,
+        NativePopup.show(image: NativePopup.Preset.Feedback.bad,
                          title: "Not Helpful",
                          message: "Thanks for your feedback.")
     }
     @IBAction func emptyMessageDidTap(_ sender: UIButton) {
-        NativePopup.show(image: NativePopup.Image.Feedback.good,
+        NativePopup.show(image: NativePopup.Preset.Feedback.good,
                          title: "Empty Message 🗑",
                          message: nil)
     }
