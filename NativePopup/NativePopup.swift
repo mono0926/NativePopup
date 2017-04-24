@@ -86,7 +86,7 @@ public class NativePopup: UIView {
 
         let sideSpace: CGFloat = 8
         titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: sideSpace).isActive = true
-        titleLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: sideSpace).isActive = true
+        titleLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -sideSpace).isActive = true
 
         let bottomSpace: CGFloat = 28
         if message?.isEmpty ?? true {
@@ -95,7 +95,7 @@ public class NativePopup: UIView {
             addSubview(messageLabel)
             titleLabel.bottomAnchor.constraint(equalTo: messageLabel.topAnchor, constant: -10).isActive = true
             messageLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: sideSpace).isActive = true
-            messageLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: sideSpace).isActive = true
+            messageLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -sideSpace).isActive = true
             messageLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -bottomSpace).isActive = true
         }
 
