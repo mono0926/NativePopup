@@ -15,10 +15,10 @@ extension Extension where Base: UIView {
     func addSubview(_ view: UIView, insets: UIEdgeInsets = .zero) {
         view.translatesAutoresizingMaskIntoConstraints = false
         base.addSubview(view)
-        base.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        base.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        base.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        base.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        base.leftAnchor.constraint(equalTo: view.leftAnchor, constant: insets.left).isActive = true
+        base.topAnchor.constraint(equalTo: view.topAnchor, constant: insets.top).isActive = true
+        base.rightAnchor.constraint(equalTo: view.rightAnchor, constant: insets.right).isActive = true
+        base.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: insets.bottom).isActive = true
     }
     func addSubviewCenter(_ view: UIView, offset point: CGPoint = .zero) {
         view.translatesAutoresizingMaskIntoConstraints = false
