@@ -108,15 +108,12 @@
 		FE85338D1EAC7C92004BB756 /* NativePopup */ = {
 			isa = PBXGroup;
 			children = (
+				FECA87F31EADBC2500D07CB1 /* Extensions */,
 				FE85338E1EAC7C92004BB756 /* NativePopup.h */,
 				FE85338F1EAC7C92004BB756 /* Info.plist */,
 				FECA87D71EAC7D9E00D07CB1 /* NativePopup.swift */,
-				FECA87E01EACC77800D07CB1 /* NativePopup.extension.swift */,
 				FECA87E21EACC7F000D07CB1 /* UIImageConvertible.swift */,
 				FECA87DE1EAC94B300D07CB1 /* Assets.xcassets */,
-				FECA87ED1EADAC3800D07CB1 /* Bundle.extension.swift */,
-				FECA87EF1EADB80700D07CB1 /* UIView.extension.swift */,
-				FECA87F11EADBA3C00D07CB1 /* Extension.swift */,
 			);
 			path = NativePopup;
 			sourceTree = "<group>";
@@ -132,6 +129,17 @@
 				FECA87C51EAC7CCF00D07CB1 /* Info.plist */,
 			);
 			path = Example;
+			sourceTree = "<group>";
+		};
+		FECA87F31EADBC2500D07CB1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FECA87F11EADBA3C00D07CB1 /* Extension.swift */,
+				FECA87E01EACC77800D07CB1 /* NativePopup.extension.swift */,
+				FECA87ED1EADAC3800D07CB1 /* Bundle.extension.swift */,
+				FECA87EF1EADB80700D07CB1 /* UIView.extension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
