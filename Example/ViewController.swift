@@ -46,5 +46,10 @@ class ViewController: UIViewController {
                          title: "Empty Message 🗑",
                          message: nil)
     }
+    @IBAction func emojiDidTap(_ sender: UIButton) {
+        NativePopup.show(image: Character("🐶"),
+                         title: "イッヌ",
+                         message: "絵文字対応したワン")
+    }
 }
 

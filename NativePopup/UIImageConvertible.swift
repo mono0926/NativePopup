@@ -12,6 +12,16 @@ import UIKit
 public enum Image {
     case image(UIImage)
     case emoji(Character)
+
+    func validate() {
+        switch self {
+        case .image(let image):
+            assert(image.size.width == image.size.height, "Aspect ratio should be 1:1.")
+        case .emoji:
+            // TODO: should check?
+            break
+        }
+    }
 }
 
 public protocol ImageConvertible {
@@ -20,4 +30,8 @@ public protocol ImageConvertible {
 
 extension UIImage: ImageConvertible {
     public var image: Image { return .image(self) }
+}
+
+extension Character: ImageConvertible {
+    public var image: Image { return .emoji(self) }
 }

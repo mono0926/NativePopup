@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1Qd-4G-b8f">
-                                <rect key="frame" x="132.5" y="40" width="110" height="120"/>
+                                <rect key="frame" x="132.5" y="40" width="110" height="150"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXq-6g-Fy7">
                                         <rect key="frame" x="0.0" y="0.0" width="110" height="30"/>
@@ -49,8 +48,14 @@
                                         <rect key="frame" x="0.0" y="90" width="110" height="30"/>
                                         <state key="normal" title="Empty Message"/>
                                         <connections>
-                                            <action selector="badDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dht-vI-KuR"/>
                                             <action selector="emptyMessageDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5aC-RM-lb4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Jg-tM-afe">
+                                        <rect key="frame" x="0.0" y="120" width="110" height="30"/>
+                                        <state key="normal" title="Emoji"/>
+                                        <connections>
+                                            <action selector="emojiDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BgE-JD-noM"/>
                                         </connections>
                                     </button>
                                 </subviews>

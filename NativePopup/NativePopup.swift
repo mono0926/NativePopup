@@ -31,17 +31,22 @@ public class NativePopup: UIView {
         isUserInteractionEnabled = false
 
         let image = image.image
+        image.validate()
         let imageView: UIView
         switch image {
         case .image(let image):
             imageView = UIImageView(image: image)
-            assert(image.size.width == image.size.height, "Aspect ratio should be 1:1.")
             imageView.contentMode = .scaleAspectFit
             imageView.layer.cornerRadius = 6
             imageView.clipsToBounds = true
         case .emoji(let character):
-            imageView = UILabel()
-            // TODO
+            let label = UILabel()
+            label.text = String(character)
+            label.font = UIFont.systemFont(ofSize: 100)
+            label.clipsToBounds = false
+            label.textAlignment = .center
+            label.lineBreakMode = .byCharWrapping
+            imageView = label
             break
         }
 
