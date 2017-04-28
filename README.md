@@ -51,6 +51,11 @@ NativePopup.show(image: Character("🐶"),
 NativePopup.show(image: NativePopup.Preset.Feedback.good,
                  title: "Empty Message 🗑",
                  message: nil)
+// Custom duration (default duration is 1.5 seconds)
+NativePopup.show(image: Character("🔟"),
+                    title: "10 seconds",
+                    message: "Long duration🙇",
+                    duration: 10)
 ```
 
 `image` accepts `ImageConvertible` protocol.

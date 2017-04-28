@@ -24,13 +24,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hfa-GM-Q6d">
-                                <rect key="frame" x="0.0" y="0.0" width="110" height="150"/>
+                                <rect key="frame" x="0.0" y="0.0" width="110" height="180"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="BDZ-hc-dGd">
-                                    <rect key="frame" x="0.0" y="0.0" width="110" height="150"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="110" height="180"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1Qd-4G-b8f">
-                                            <rect key="frame" x="0.0" y="0.0" width="110" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="110" height="180"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXq-6g-Fy7">
                                                     <rect key="frame" x="0.0" y="0.0" width="110" height="30"/>
@@ -65,6 +65,13 @@
                                                     <state key="normal" title="Emoji"/>
                                                     <connections>
                                                         <action selector="emojiDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BgE-JD-noM"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxP-p0-yZR">
+                                                    <rect key="frame" x="0.0" y="150" width="110" height="30"/>
+                                                    <state key="normal" title="10 seconds"/>
+                                                    <connections>
+                                                        <action selector="longDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jok-vX-ajz"/>
                                                     </connections>
                                                 </button>
                                             </subviews>

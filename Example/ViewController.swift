@@ -38,5 +38,11 @@ class ViewController: UIViewController {
                          title: "イッヌ",
                          message: "絵文字対応したワン")
     }
+    @IBAction func longDidTap(_ sender: UIButton) {
+        NativePopup.show(image: Character("🔟"),
+                         title: "10 seconds",
+                         message: "Long duration🙇",
+                         duration: 10)
+    }
 }
 
