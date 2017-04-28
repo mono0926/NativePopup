@@ -13,16 +13,16 @@ public class NativePopup: UIView {
     private static let keyWindow = UIApplication.shared.keyWindow!
     fileprivate weak static var currentView: NativePopup?
 
-    public static func show(image: ImageConvertible, title: String, message: String?) {
-        let view = NativePopup(image: image, title: title, message: message)
-        view.show()
+    public static func show(image: ImageConvertible, title: String, message: String?, duration: TimeInterval = 1.5) {
+        let view = NativePopup(image: image, title: title, message: message, duration: duration)
+        view.show(duration: duration)
     }
 
     public required init(coder aDecoder: NSCoder) {
         fatalError("should not be called")
     }
 
-    private init(image: ImageConvertible, title: String, message: String?) {
+    private init(image: ImageConvertible, title: String, message: String?, duration: TimeInterval) {
         super.init(frame: CGRect.zero)
 
         layer.cornerRadius = 8
@@ -52,11 +52,11 @@ public class NativePopup: UIView {
         let titleLabel = UILabel()
         titleLabel.text = title
         // not dynamic size
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 22)
 
         let messageLabel = UILabel()
         messageLabel.text = message
-        messageLabel.font = UIFont.systemFont(ofSize: 15)
+        messageLabel.font = UIFont.systemFont(ofSize: 16)
 
         [titleLabel, messageLabel].forEach {
             $0.textColor = UIColor(white: 0.35, alpha: 1)
@@ -67,7 +67,7 @@ public class NativePopup: UIView {
             $0.attributedText = NSAttributedString(string: $0.text ?? "", attributes: [NSParagraphStyleAttributeName: style])
         }
 
-        let effectView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+        let effectView = UIVisualEffectView(effect: UIBlurEffect(style: .extraLight))
         np.addSubview(effectView)
 
         addSubview(imageView)
@@ -77,18 +77,18 @@ public class NativePopup: UIView {
         imageView.heightAnchor.constraint(equalToConstant: 112).isActive = true
         imageView.topAnchor.constraint(equalTo: topAnchor, constant: 32).isActive = true
         imageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        imageView.bottomAnchor.constraint(equalTo: titleLabel.topAnchor, constant: -21).isActive = true
+        imageView.bottomAnchor.constraint(equalTo: titleLabel.topAnchor, constant: -17).isActive = true
 
         let sideSpace: CGFloat = 8
         titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: sideSpace).isActive = true
         titleLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -sideSpace).isActive = true
 
-        let bottomSpace: CGFloat = 28
+        let bottomSpace: CGFloat = 37
         if message?.isEmpty ?? true {
             titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -bottomSpace).isActive = true
         } else {
             addSubview(messageLabel)
-            titleLabel.bottomAnchor.constraint(equalTo: messageLabel.topAnchor, constant: -10).isActive = true
+            titleLabel.bottomAnchor.constraint(equalTo: messageLabel.topAnchor, constant: -6).isActive = true
             messageLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: sideSpace).isActive = true
             messageLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -sideSpace).isActive = true
             messageLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -bottomSpace).isActive = true
@@ -97,9 +97,9 @@ public class NativePopup: UIView {
         [self, effectView, imageView, titleLabel, messageLabel].forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
     }
 
-    private func show() {
+    private func show(duration: TimeInterval) {
         let window = type(of: self).keyWindow
-        // TODO: need to remove?
+        // MEMO: Need to remove?(iOS native popup doesn't remove previous popup)
         type(of: self).currentView?.removeFromSuperview()
         type(of: self).currentView = self
         window.addSubview(self)
@@ -109,25 +109,25 @@ public class NativePopup: UIView {
         let defaultY = centerYAnchor.constraint(equalTo: window.centerYAnchor)
         let initialY = topAnchor.constraint(equalTo: window.bottomAnchor)
         initialY.isActive = true
+        update(alpha: 0)
         window.layoutIfNeeded()
 
         initialY.isActive = false
         defaultY.isActive = true
-        // TODO: adjust animation
-        // TODO: refactor(resolve nest)
+        // MEMO: Enhance animation(especially, animation curve)
+        // MEMO: Refactor(resolve nest?)
         UIView.animate(withDuration: 0.3,
                        delay: 0,
                        options: UIViewAnimationOptions.curveEaseOut,
                        animations: {
+                        self.update(alpha: 1)
                         window.layoutIfNeeded()
         }, completion: { finished in
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
-                // TODO: adjust duration(consider text length?)
-                // TODO: adjust animation
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + duration) {
                 UIView.animate(withDuration: 0.2,
                                animations: {
                                 // for visual effecto view smooth animation
-                                self.subviews.forEach { $0.alpha = 0 }
+                                self.update(alpha: 0)
                                 self.transform = self.transform.scaledBy(x: 0.8, y: 0.8)
                 },
                                completion: { finished in
@@ -135,5 +135,9 @@ public class NativePopup: UIView {
                 })
             }
         })
+    }
+
+    private func update(alpha: CGFloat) {
+        self.subviews.forEach { $0.alpha = alpha }
     }
 }

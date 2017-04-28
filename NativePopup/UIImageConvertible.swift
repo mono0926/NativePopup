@@ -18,7 +18,7 @@ public enum Image {
         case .image(let image):
             assert(image.size.width == image.size.height, "Aspect ratio should be 1:1.")
         case .emoji:
-            // TODO: should check?
+            // MEMO: should check?
             break
         }
     }
