@@ -58,6 +58,7 @@ NativePopup.show(image: Character("🔟"),
                     duration: 10)
 ```
 
+
 `image` accepts `ImageConvertible` protocol.
 
 ```swift
@@ -111,6 +112,8 @@ extension NativePopup {
     }
 }
 ```
+
+**Image size should be 112 x 112.**
 
 # Installation
 
