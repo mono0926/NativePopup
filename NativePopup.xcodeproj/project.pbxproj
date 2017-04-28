@@ -92,8 +92,8 @@
 		FE8533811EAC7C92004BB756 = {
 			isa = PBXGroup;
 			children = (
-				FE85338D1EAC7C92004BB756 /* NativePopup */,
 				FECA87B81EAC7CCF00D07CB1 /* Example */,
+				FE85338D1EAC7C92004BB756 /* NativePopup */,
 				FE85338C1EAC7C92004BB756 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -111,11 +111,11 @@
 			isa = PBXGroup;
 			children = (
 				FECA87F31EADBC2500D07CB1 /* Extensions */,
-				FE85338E1EAC7C92004BB756 /* NativePopup.h */,
+				FECA87DE1EAC94B300D07CB1 /* Assets.xcassets */,
 				FE85338F1EAC7C92004BB756 /* Info.plist */,
+				FE85338E1EAC7C92004BB756 /* NativePopup.h */,
 				FECA87D71EAC7D9E00D07CB1 /* NativePopup.swift */,
 				FECA87E21EACC7F000D07CB1 /* UIImageConvertible.swift */,
-				FECA87DE1EAC94B300D07CB1 /* Assets.xcassets */,
 			);
 			path = NativePopup;
 			sourceTree = "<group>";
@@ -124,11 +124,11 @@
 			isa = PBXGroup;
 			children = (
 				FECA87B91EAC7CCF00D07CB1 /* AppDelegate.swift */,
-				FECA87BB1EAC7CCF00D07CB1 /* ViewController.swift */,
-				FECA87BD1EAC7CCF00D07CB1 /* Main.storyboard */,
 				FECA87C01EAC7CCF00D07CB1 /* Assets.xcassets */,
-				FECA87C21EAC7CCF00D07CB1 /* LaunchScreen.storyboard */,
 				FECA87C51EAC7CCF00D07CB1 /* Info.plist */,
+				FECA87C21EAC7CCF00D07CB1 /* LaunchScreen.storyboard */,
+				FECA87BD1EAC7CCF00D07CB1 /* Main.storyboard */,
+				FECA87BB1EAC7CCF00D07CB1 /* ViewController.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -136,13 +136,14 @@
 		FECA87F31EADBC2500D07CB1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				FECA87ED1EADAC3800D07CB1 /* Bundle.extension.swift */,
 				FECA87F11EADBA3C00D07CB1 /* Extension.swift */,
 				FECA87E01EACC77800D07CB1 /* NativePopup.extension.swift */,
-				FECA87ED1EADAC3800D07CB1 /* Bundle.extension.swift */,
-				FECA87EF1EADB80700D07CB1 /* UIView.extension.swift */,
 				FECA87F41EADBD7F00D07CB1 /* UIImage.extension.swift */,
+				FECA87EF1EADB80700D07CB1 /* UIView.extension.swift */,
 			);
 			name = Extensions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +299,7 @@
 				FECA87BE1EAC7CCF00D07CB1 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		FECA87C21EAC7CCF00D07CB1 /* LaunchScreen.storyboard */ = {
@@ -306,6 +308,7 @@
 				FECA87C31EAC7CCF00D07CB1 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
