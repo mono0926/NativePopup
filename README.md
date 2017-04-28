@@ -100,3 +100,19 @@ extension NativePopup {
     }
 }
 ```
+
+# Installation
+
+You can install by [Carthage](https://github.com/Carthage/Carthage) or add [NativePopup sources](https://github.com/mono0926/NativePopup/tree/master/NativePopup) manually.
+
+## [Carthage](https://github.com/Carthage/Carthage)
+
+Add this to Cartfile
+
+```
+github "mono0926/NativePopup"
+```
+
+```sh
+$ carthage update
+```
