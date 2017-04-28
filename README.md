@@ -69,3 +69,34 @@ public protocol ImageConvertible {
     var image: Image { get }
 }
 ```
+
+`UIImage` and `Character` conforms to `ImageConvertible` by default.
+
+```swift
+extension UIImage: ImageConvertible {
+    public var image: Image { return .image(self) }
+}
+
+extension Character: ImageConvertible {
+    public var image: Image { return .emoji(self) }
+}
+```
+
+You can define custom preset image as below.
+
+```swift
+extension NativePopup {
+    public struct Preset {
+        private init() {}
+        public enum Feedback: String, ImageConvertible {
+            case
+            good,
+            bad
+
+            public var image: Image {
+                return .image(UIImage.init(nativePopupNamed: "feedback_\(rawValue)"))
+            }
+        }
+    }
+}
+```
