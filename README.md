@@ -31,21 +31,26 @@ Very simple to use NativePopup🐶
 
 
 ```swift
-NativePopup.show(image: UIImage(named: "love")!,
-                 title: "参考になった",
-                 message: "フィードバックをありがとう\nございました。")
+// Good
 NativePopup.show(image: NativePopup.Preset.Feedback.good,
                  title: "Helpful",
                  message: "Thanks for your feedback.")
+// Bad
 NativePopup.show(image: NativePopup.Preset.Feedback.bad,
                  title: "Not Helpful",
                  message: "Thanks for your feedback.")
-NativePopup.show(image: NativePopup.Preset.Feedback.good,
-                 title: "Empty Message 🗑",
-                 message: nil)
+// Custom Image
+NativePopup.show(image: UIImage(named: "love")!,
+                 title: "参考になった",
+                 message: "フィードバックをありがとう\nございました。")
+// Emoji
 NativePopup.show(image: Character("🐶"),
                  title: "イッヌ",
                  message: "絵文字対応したワン")
+// Title only
+NativePopup.show(image: NativePopup.Preset.Feedback.good,
+                 title: "Empty Message 🗑",
+                 message: nil)
 ```
 
 `image` accepts `ImageConvertible` protocol.
