@@ -30,6 +30,8 @@ public class NativePopup: UIView {
 
         isUserInteractionEnabled = false
 
+        let tintColor = #colorLiteral(red: 0.3529411765, green: 0.3529411765, blue: 0.3529411765, alpha: 1)
+
         let image = image.image
         image.validate()
         let imageView: UIView
@@ -39,6 +41,7 @@ public class NativePopup: UIView {
             imageView.contentMode = .scaleAspectFit
             imageView.layer.cornerRadius = 6
             imageView.clipsToBounds = true
+            imageView.tintColor = tintColor
         case .emoji(let character):
             let label = UILabel()
             label.text = String(character)
@@ -59,7 +62,7 @@ public class NativePopup: UIView {
         messageLabel.font = UIFont.systemFont(ofSize: 16)
 
         [titleLabel, messageLabel].forEach {
-            $0.textColor = UIColor(white: 0.35, alpha: 1)
+            $0.textColor = tintColor
             $0.numberOfLines = 0
             let style = NSMutableParagraphStyle()
             style.lineSpacing = 3
