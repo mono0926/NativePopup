@@ -3,6 +3,7 @@
 Clone of Apple iOS AppStore review feedback popup.
 
 NativePopup clones native popup's design and behavior(animation and user interaction).
+And you can use custom image and emoji in addition to bad/good icons.
 
 ## Original
 
