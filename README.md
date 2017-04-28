@@ -47,7 +47,7 @@ NativePopup.show(image: Character("🐶"),
                  message: "絵文字対応したワン")
 ```
 
-`image` accepts `ImageConvertible` value.
+`image` accepts `ImageConvertible` protocol.
 
 ```swift
 public enum Image {
