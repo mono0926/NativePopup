@@ -1,6 +1,6 @@
 # NativePopup
 
-Copy of Apple iOS AppStore review feedback popup.
+Clone of Apple iOS AppStore review feedback popup.
 
 NativePopup clones native popup's design and behavior(animation and user interaction).
 
