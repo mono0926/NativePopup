@@ -23,3 +23,49 @@ Good | Bad
 Custom Image | Emoji
 --- | ---
 ![custome image](https://raw.githubusercontent.com/mono0926/NativePopup/master/Screenshots/NativePopup/custom_image.png) | ![bad](https://raw.githubusercontent.com/mono0926/NativePopup/master/Screenshots/NativePopup/emoji.png)
+
+# Usage
+
+Very simple to use NativePopup🐶
+
+
+```swift
+NativePopup.show(image: UIImage(named: "love")!,
+                 title: "参考になった",
+                 message: "フィードバックをありがとう\nございました。")
+NativePopup.show(image: NativePopup.Preset.Feedback.good,
+                 title: "Helpful",
+                 message: "Thanks for your feedback.")
+NativePopup.show(image: NativePopup.Preset.Feedback.bad,
+                 title: "Not Helpful",
+                 message: "Thanks for your feedback.")
+NativePopup.show(image: NativePopup.Preset.Feedback.good,
+                 title: "Empty Message 🗑",
+                 message: nil)
+NativePopup.show(image: Character("🐶"),
+                 title: "イッヌ",
+                 message: "絵文字対応したワン")
+```
+
+`image` accepts `ImageConvertible` value.
+
+```swift
+public enum Image {
+    case image(UIImage)
+    case emoji(Character)
+
+    func validate() {
+        switch self {
+        case .image(let image):
+            assert(image.size.width == image.size.height, "Aspect ratio should be 1:1.")
+        case .emoji:
+            // MEMO: should check?
+            break
+        }
+    }
+}
+
+public protocol ImageConvertible {
+    var image: Image { get }
+}
+```
