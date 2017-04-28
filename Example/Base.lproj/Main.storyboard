@@ -20,56 +20,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1Qd-4G-b8f">
-                                <rect key="frame" x="132.5" y="40" width="110" height="150"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXq-6g-Fy7">
-                                        <rect key="frame" x="0.0" y="0.0" width="110" height="30"/>
-                                        <state key="normal" title="Custom Image"/>
-                                        <connections>
-                                            <action selector="customDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q1J-q8-jEy"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zg-8M-9po">
-                                        <rect key="frame" x="0.0" y="30" width="110" height="30"/>
-                                        <state key="normal" title="Good"/>
-                                        <connections>
-                                            <action selector="goodDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y6l-xd-3pS"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fw-rY-gmt">
-                                        <rect key="frame" x="0.0" y="60" width="110" height="30"/>
-                                        <state key="normal" title="Bad"/>
-                                        <connections>
-                                            <action selector="badDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3HN-2P-cQG"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGk-f6-FDy">
-                                        <rect key="frame" x="0.0" y="90" width="110" height="30"/>
-                                        <state key="normal" title="Empty Message"/>
-                                        <connections>
-                                            <action selector="emptyMessageDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5aC-RM-lb4"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Jg-tM-afe">
-                                        <rect key="frame" x="0.0" y="120" width="110" height="30"/>
-                                        <state key="normal" title="Emoji"/>
-                                        <connections>
-                                            <action selector="emojiDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BgE-JD-noM"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Fz1-fx-Fg4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hfa-GM-Q6d">
+                                <rect key="frame" x="0.0" y="0.0" width="110" height="150"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="BDZ-hc-dGd">
+                                    <rect key="frame" x="0.0" y="0.0" width="110" height="150"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1Qd-4G-b8f">
+                                            <rect key="frame" x="0.0" y="0.0" width="110" height="150"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXq-6g-Fy7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="30"/>
+                                                    <state key="normal" title="Custom Image"/>
+                                                    <connections>
+                                                        <action selector="customDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q1J-q8-jEy"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zg-8M-9po">
+                                                    <rect key="frame" x="0.0" y="30" width="110" height="30"/>
+                                                    <state key="normal" title="Good"/>
+                                                    <connections>
+                                                        <action selector="goodDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y6l-xd-3pS"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fw-rY-gmt">
+                                                    <rect key="frame" x="0.0" y="60" width="110" height="30"/>
+                                                    <state key="normal" title="Bad"/>
+                                                    <connections>
+                                                        <action selector="badDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3HN-2P-cQG"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGk-f6-FDy">
+                                                    <rect key="frame" x="0.0" y="90" width="110" height="30"/>
+                                                    <state key="normal" title="Empty Message"/>
+                                                    <connections>
+                                                        <action selector="emptyMessageDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5aC-RM-lb4"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Jg-tM-afe">
+                                                    <rect key="frame" x="0.0" y="120" width="110" height="30"/>
+                                                    <state key="normal" title="Emoji"/>
+                                                    <connections>
+                                                        <action selector="emojiDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BgE-JD-noM"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="1Qd-4G-b8f" firstAttribute="top" secondItem="BDZ-hc-dGd" secondAttribute="top" id="502-db-oc8"/>
+                                        <constraint firstItem="1Qd-4G-b8f" firstAttribute="leading" secondItem="BDZ-hc-dGd" secondAttribute="leading" id="7Sp-0B-vNb"/>
+                                        <constraint firstAttribute="bottom" secondItem="1Qd-4G-b8f" secondAttribute="bottom" id="MzB-dv-eqE"/>
+                                        <constraint firstAttribute="trailing" secondItem="1Qd-4G-b8f" secondAttribute="trailing" id="uHN-ZU-Cth"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="extraLight"/>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="1Qd-4G-b8f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EkV-7E-lSI"/>
-                            <constraint firstItem="1Qd-4G-b8f" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="PuZ-3o-EVq"/>
+                            <constraint firstItem="hfa-GM-Q6d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0RM-xU-GOP"/>
+                            <constraint firstAttribute="trailing" secondItem="Fz1-fx-Fg4" secondAttribute="trailing" id="bXI-xs-htk"/>
+                            <constraint firstItem="Fz1-fx-Fg4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="i8A-u4-WZj"/>
+                            <constraint firstItem="Fz1-fx-Fg4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kzX-Tr-2Sj"/>
+                            <constraint firstItem="hfa-GM-Q6d" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pa7-yF-d80"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Fz1-fx-Fg4" secondAttribute="bottom" id="ppt-jj-k2h"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="414" height="736"/>
+    </resources>
 </document>
