@@ -2,16 +2,24 @@
 
 Copy of Apple iOS AppStore review feedback popup.
 
+NativePopup clones native popup's design and behavior(animation and user interaction).
+
 ## Original
 
-good | bad
+Good | Bad
 --- | ---
-![good](https://raw.githubusercontent.com/mono0926/NativePopup/master/Screenshots/original_good.PNG) | ![bad](https://raw.githubusercontent.com/mono0926/NativePopup/master/Screenshots/original_bad.PNG)
-
-
+![good](https://raw.githubusercontent.com/mono0926/NativePopup/master/Screenshots/Original/good.png) | ![bad](https://raw.githubusercontent.com/mono0926/NativePopup/master/Screenshots/Original/bad.png)
 
 ## NativePopup
 
-good | bad | custom
---- | --- | ---
-![good](https://raw.githubusercontent.com/mono0926/NativePopup/master/Screenshots/good.PNG) | ![bad](https://raw.githubusercontent.com/mono0926/NativePopup/master/Screenshots/bad.PNG) | ![custom](https://raw.githubusercontent.com/mono0926/NativePopup/master/Screenshots/custom.PNG)
+## Good/Bad
+
+Good | Bad 
+--- | --- 
+![good](https://raw.githubusercontent.com/mono0926/NativePopup/master/Screenshots/NativePopup/good.png) | ![bad](https://raw.githubusercontent.com/mono0926/NativePopup/master/Screenshots/NativePopup/bad.png)
+
+## Custom Image/Emoji
+
+Custom Image | Emoji
+--- | ---
+![custome image](https://raw.githubusercontent.com/mono0926/NativePopup/master/Screenshots/NativePopup/custom_image.png) | ![bad](https://raw.githubusercontent.com/mono0926/NativePopup/master/Screenshots/NativePopup/emoji.png)
