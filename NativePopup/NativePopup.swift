@@ -12,6 +12,7 @@ import UIKit
 public class NativePopup: UIView {
     private static let keyWindow = UIApplication.shared.keyWindow!
     fileprivate weak static var currentView: NativePopup?
+    private let effectView: UIVisualEffectView
 
     public static func show(image: ImageConvertible, title: String, message: String?, duration: TimeInterval = 1.5) {
         let view = NativePopup(image: image, title: title, message: message, duration: duration)
@@ -23,7 +24,9 @@ public class NativePopup: UIView {
     }
 
     private init(image: ImageConvertible, title: String, message: String?, duration: TimeInterval) {
+        effectView = UIVisualEffectView(effect: UIBlurEffect(style: .extraLight))
         super.init(frame: CGRect.zero)
+        np.addSubview(effectView)
 
         layer.cornerRadius = 8
         clipsToBounds = true
@@ -70,11 +73,8 @@ public class NativePopup: UIView {
             $0.attributedText = NSAttributedString(string: $0.text ?? "", attributes: [NSParagraphStyleAttributeName: style])
         }
 
-        let effectView = UIVisualEffectView(effect: UIBlurEffect(style: .extraLight))
-        np.addSubview(effectView)
-
-        addSubview(imageView)
-        addSubview(titleLabel)
+        effectView.addSubview(imageView)
+        effectView.addSubview(titleLabel)
 
         imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor, multiplier: 1).isActive = true
         imageView.heightAnchor.constraint(equalToConstant: 112).isActive = true
@@ -90,7 +90,7 @@ public class NativePopup: UIView {
         if message?.isEmpty ?? true {
             titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -bottomSpace).isActive = true
         } else {
-            addSubview(messageLabel)
+            effectView.addSubview(messageLabel)
             titleLabel.bottomAnchor.constraint(equalTo: messageLabel.topAnchor, constant: -6).isActive = true
             messageLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: sideSpace).isActive = true
             messageLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -sideSpace).isActive = true
@@ -141,6 +141,6 @@ public class NativePopup: UIView {
     }
 
     private func update(alpha: CGFloat) {
-        self.subviews.forEach { $0.alpha = alpha }
+        effectView.alpha = alpha
     }
 }
