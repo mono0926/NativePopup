@@ -1,6 +1,10 @@
 # NativePopup
 
-Clone of Apple iOS AppStore review feedback popup.
+![platforms](https://img.shields.io/badge/platforms-iOS-333333.svg)
+![Pod License](https://img.shields.io/cocoapods/l/SVProgressHUD.svg?style=flat)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
+`NativePopup` is clone of Apple iOS AppStore review feedback popup.
 
 NativePopup clones native popup's design and behavior(animation and user interaction).
 And you can use custom image and emoji in addition to bad/good icons.
