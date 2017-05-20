@@ -13,6 +13,7 @@ public class NativePopup: UIView {
     private let keyWindow = UIApplication.shared.keyWindow!
     fileprivate weak static var currentView: NativePopup?
     private let effectView: UIVisualEffectView
+    private let imageView: UIView
 
     public static func show(image: ImageConvertible,
                             title: String,
@@ -33,26 +34,15 @@ public class NativePopup: UIView {
                  title: String,
                  message: String?) {
         effectView = UIVisualEffectView(effect: UIBlurEffect(style: .extraLight))
-        super.init(frame: CGRect.zero)
-        np.addSubview(effectView)
-
-        layer.cornerRadius = 8
-        clipsToBounds = true
-
-        isUserInteractionEnabled = false
-
-        let tintColor = #colorLiteral(red: 0.3529411765, green: 0.3529411765, blue: 0.3529411765, alpha: 1)
 
         let image = image.image
         image.validate()
-        let imageView: UIView
         switch image {
         case .image(let image):
             imageView = UIImageView(image: image)
             imageView.contentMode = .scaleAspectFit
             imageView.layer.cornerRadius = 6
             imageView.clipsToBounds = true
-            imageView.tintColor = tintColor
         case .view(let view):
             imageView = view
         case .emoji(let character):
@@ -64,6 +54,17 @@ public class NativePopup: UIView {
             imageView.np.addSubviewCenter(label)
             imageView.clipsToBounds = false
         }
+
+        super.init(frame: CGRect.zero)
+        np.addSubview(effectView)
+
+        layer.cornerRadius = 8
+        clipsToBounds = true
+
+        isUserInteractionEnabled = false
+
+        let tintColor = #colorLiteral(red: 0.3529411765, green: 0.3529411765, blue: 0.3529411765, alpha: 1)
+        imageView.tintColor = tintColor
 
         let titleLabel = UILabel()
         titleLabel.text = title
@@ -166,6 +167,9 @@ public class NativePopup: UIView {
     }
 
     private func dismissAfter(duration: TimeInterval) {
+        if let animatable = imageView as? Animatable {
+            animatable.animate()
+        }
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + duration) {
             UIView.animate(withDuration: 0.2,
                            animations: {
