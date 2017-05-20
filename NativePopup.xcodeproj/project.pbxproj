@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		FE8533901EAC7C92004BB756 /* NativePopup.h in Headers */ = {isa = PBXBuildFile; fileRef = FE85338E1EAC7C92004BB756 /* NativePopup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FEB0316D1ECFF6770039A1C6 /* Preset.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB0316C1ECFF6770039A1C6 /* Preset.swift */; };
+		FEB031711ECFF6A30039A1C6 /* Bundle.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB031701ECFF6A30039A1C6 /* Bundle.extension.swift */; };
 		FECA87BA1EAC7CCF00D07CB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA87B91EAC7CCF00D07CB1 /* AppDelegate.swift */; };
 		FECA87BC1EAC7CCF00D07CB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA87BB1EAC7CCF00D07CB1 /* ViewController.swift */; };
 		FECA87BF1EAC7CCF00D07CB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FECA87BD1EAC7CCF00D07CB1 /* Main.storyboard */; };
@@ -17,9 +19,7 @@
 		FECA87D91EAC87B700D07CB1 /* NativePopup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE85338B1EAC7C92004BB756 /* NativePopup.framework */; };
 		FECA87DA1EAC87B700D07CB1 /* NativePopup.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FE85338B1EAC7C92004BB756 /* NativePopup.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FECA87DF1EAC94B300D07CB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FECA87DE1EAC94B300D07CB1 /* Assets.xcassets */; };
-		FECA87E11EACC77800D07CB1 /* Preset.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA87E01EACC77800D07CB1 /* Preset.swift */; };
 		FECA87E31EACC7F000D07CB1 /* UIImageConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA87E21EACC7F000D07CB1 /* UIImageConvertible.swift */; };
-		FECA87EE1EADAC3800D07CB1 /* Bundle.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA87ED1EADAC3800D07CB1 /* Bundle.extension.swift */; };
 		FECA87F01EADB80700D07CB1 /* UIView.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA87EF1EADB80700D07CB1 /* UIView.extension.swift */; };
 		FECA87F21EADBA3C00D07CB1 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA87F11EADBA3C00D07CB1 /* Extension.swift */; };
 		FECA87F51EADBD7F00D07CB1 /* UIImage.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA87F41EADBD7F00D07CB1 /* UIImage.extension.swift */; };
@@ -53,6 +53,8 @@
 		FE85338B1EAC7C92004BB756 /* NativePopup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NativePopup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE85338E1EAC7C92004BB756 /* NativePopup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NativePopup.h; sourceTree = "<group>"; };
 		FE85338F1EAC7C92004BB756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEB0316C1ECFF6770039A1C6 /* Preset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preset.swift; sourceTree = "<group>"; };
+		FEB031701ECFF6A30039A1C6 /* Bundle.extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bundle.extension.swift; sourceTree = "<group>"; };
 		FECA87B71EAC7CCF00D07CB1 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FECA87B91EAC7CCF00D07CB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FECA87BB1EAC7CCF00D07CB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,9 +64,7 @@
 		FECA87C51EAC7CCF00D07CB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FECA87D71EAC7D9E00D07CB1 /* NativePopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativePopup.swift; sourceTree = "<group>"; };
 		FECA87DE1EAC94B300D07CB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FECA87E01EACC77800D07CB1 /* Preset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preset.swift; sourceTree = "<group>"; };
 		FECA87E21EACC7F000D07CB1 /* UIImageConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageConvertible.swift; sourceTree = "<group>"; };
-		FECA87ED1EADAC3800D07CB1 /* Bundle.extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bundle.extension.swift; sourceTree = "<group>"; };
 		FECA87EF1EADB80700D07CB1 /* UIView.extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.extension.swift; sourceTree = "<group>"; };
 		FECA87F11EADBA3C00D07CB1 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		FECA87F41EADBD7F00D07CB1 /* UIImage.extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.extension.swift; sourceTree = "<group>"; };
@@ -110,6 +110,7 @@
 		FE85338D1EAC7C92004BB756 /* NativePopup */ = {
 			isa = PBXGroup;
 			children = (
+				FEB0316C1ECFF6770039A1C6 /* Preset.swift */,
 				FECA87F31EADBC2500D07CB1 /* Extensions */,
 				FECA87DE1EAC94B300D07CB1 /* Assets.xcassets */,
 				FE85338F1EAC7C92004BB756 /* Info.plist */,
@@ -136,9 +137,8 @@
 		FECA87F31EADBC2500D07CB1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				FECA87ED1EADAC3800D07CB1 /* Bundle.extension.swift */,
 				FECA87F11EADBA3C00D07CB1 /* Extension.swift */,
-				FECA87E01EACC77800D07CB1 /* Preset.swift */,
+				FEB031701ECFF6A30039A1C6 /* Bundle.extension.swift */,
 				FECA87F41EADBD7F00D07CB1 /* UIImage.extension.swift */,
 				FECA87EF1EADB80700D07CB1 /* UIView.extension.swift */,
 			);
@@ -264,11 +264,11 @@
 			files = (
 				FECA87F01EADB80700D07CB1 /* UIView.extension.swift in Sources */,
 				FECA87F51EADBD7F00D07CB1 /* UIImage.extension.swift in Sources */,
-				FECA87E11EACC77800D07CB1 /* Preset.swift in Sources */,
+				FEB031711ECFF6A30039A1C6 /* Bundle.extension.swift in Sources */,
 				FECA87E31EACC7F000D07CB1 /* UIImageConvertible.swift in Sources */,
 				FECA87F21EADBA3C00D07CB1 /* Extension.swift in Sources */,
-				FECA87EE1EADAC3800D07CB1 /* Bundle.extension.swift in Sources */,
 				FECA87D81EAC7D9E00D07CB1 /* NativePopup.swift in Sources */,
+				FEB0316D1ECFF6770039A1C6 /* Preset.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
