@@ -51,7 +51,7 @@ class ViewController: UIViewController {
                          initialEffectType: .fadeIn)
     }
     @IBAction func doneAnimatinDidTap(_ sender: UIButton) {
-        NativePopup.show(image: Preset.Native.done,
+        NativePopup.show(image: Preset.Feedback.done,
                          title: "Added to Library",
                          message: nil,
                          initialEffectType: .fadeIn)

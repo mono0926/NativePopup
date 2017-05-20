@@ -13,22 +13,26 @@ public struct Preset {
     public enum Feedback: String, ImageConvertible {
         case
         good,
-        bad
-
-        public var image: Image {
-            return .image(UIImage(nativePopupNamed: "feedback_\(rawValue)"))
-        }
-    }
-
-    public enum Native: ImageConvertible {
-        case
+        bad,
         done
 
-        public var additionalMarginTop: CGFloat { return 31 }
-        public var additionalMarginBottom: CGFloat { return 18 }
+        public var additionalMarginTop: CGFloat {
+            switch self {
+            case .good, .bad: return 0
+            case .done: return 31
+            }
+        }
+        public var additionalMarginBottom: CGFloat {
+            switch self {
+            case .good, .bad: return 0
+            case .done: return 18
+            }
+        }
 
         public var image: Image {
             switch self {
+            case .good, .bad:
+                return .image(UIImage(nativePopupNamed: "feedback_\(rawValue)"))
             case .done:
                 return .view(AnimatableDoneView())
             }
