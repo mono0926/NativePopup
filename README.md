@@ -10,13 +10,16 @@
 NativePopup clones native popup's design and behavior(animation and user interaction).
 And you can use custom image and emoji in addition to bad/good icons.
 
-## Original
+# Compared with Apple original popups.
 
-Good | Bad
+NativePopup | Original
 --- | ---
-![good](https://raw.githubusercontent.com/mono0926/NativePopup/master/Screenshots/Original/good.png) | ![bad](https://raw.githubusercontent.com/mono0926/NativePopup/master/Screenshots/Original/bad.png)
+![NativePopup Done](https://github.com/mono0926/Resource/raw/master/NativePopup/GIF/done_np.gif) | ![Original Done](https://github.com/mono0926/Resource/raw/master/NativePopup/GIF/done.gif)
+![NativePopup Good](https://github.com/mono0926/Resource/raw/master/NativePopup/GIF/good_np.gif) | ![Original Good](https://github.com/mono0926/Resource/raw/master/NativePopup/GIF/good.gif)
 
-## NativePopup
+
+
+# Examples
 
 ## Good/Bad
 
