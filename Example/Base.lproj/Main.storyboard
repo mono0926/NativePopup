@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,13 +24,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hfa-GM-Q6d">
-                                <rect key="frame" x="0.0" y="0.0" width="110" height="180"/>
+                                <rect key="frame" x="0.0" y="0.0" width="110" height="210"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="BDZ-hc-dGd">
-                                    <rect key="frame" x="0.0" y="0.0" width="110" height="180"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="110" height="210"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1Qd-4G-b8f">
-                                            <rect key="frame" x="0.0" y="0.0" width="110" height="180"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="110" height="210"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXq-6g-Fy7">
                                                     <rect key="frame" x="0.0" y="0.0" width="110" height="30"/>
@@ -72,6 +72,13 @@
                                                     <state key="normal" title="10 seconds"/>
                                                     <connections>
                                                         <action selector="longDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jok-vX-ajz"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9m-dr-Kab">
+                                                    <rect key="frame" x="0.0" y="180" width="110" height="30"/>
+                                                    <state key="normal" title="FadeIn"/>
+                                                    <connections>
+                                                        <action selector="fadeInDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fPD-YX-U6c"/>
                                                     </connections>
                                                 </button>
                                             </subviews>

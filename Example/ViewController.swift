@@ -44,5 +44,11 @@ class ViewController: UIViewController {
                          message: "Long duration🙇",
                          duration: 10)
     }
+    @IBAction func fadeInDidTap(_ sender: UIButton) {
+        NativePopup.show(image: Preset.Feedback.good,
+                         title: "Helpful",
+                         message: "Thanks for your feedback.",
+                         initialEffectType: .fadeIn)
+    }
 }
 

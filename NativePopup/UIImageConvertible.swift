@@ -12,12 +12,13 @@ import UIKit
 public enum Image {
     case image(UIImage)
     case emoji(Character)
+    case view(UIView)
 
     func validate() {
         switch self {
         case .image(let image):
             assert(image.size.width == image.size.height, "Aspect ratio should be 1:1.")
-        case .emoji:
+        case .emoji, .view:
             // MEMO: should check?
             break
         }

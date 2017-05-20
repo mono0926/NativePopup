@@ -10,20 +10,28 @@ import Foundation
 import UIKit
 
 public class NativePopup: UIView {
-    private static let keyWindow = UIApplication.shared.keyWindow!
+    private let keyWindow = UIApplication.shared.keyWindow!
     fileprivate weak static var currentView: NativePopup?
     private let effectView: UIVisualEffectView
 
-    public static func show(image: ImageConvertible, title: String, message: String?, duration: TimeInterval = 1.5) {
-        let view = NativePopup(image: image, title: title, message: message, duration: duration)
-        view.show(duration: duration)
+    public static func show(image: ImageConvertible,
+                            title: String,
+                            message: String?,
+                            duration: TimeInterval = 1.5,
+                            initialEffectType: InitialEffectType = .fromBottom) {
+        let view = NativePopup(image: image,
+                               title: title,
+                               message: message)
+        view.show(duration: duration, initialEffectType: initialEffectType)
     }
 
     public required init(coder aDecoder: NSCoder) {
         fatalError("should not be called")
     }
 
-    private init(image: ImageConvertible, title: String, message: String?, duration: TimeInterval) {
+    private init(image: ImageConvertible,
+                 title: String,
+                 message: String?) {
         effectView = UIVisualEffectView(effect: UIBlurEffect(style: .extraLight))
         super.init(frame: CGRect.zero)
         np.addSubview(effectView)
@@ -45,6 +53,8 @@ public class NativePopup: UIView {
             imageView.layer.cornerRadius = 6
             imageView.clipsToBounds = true
             imageView.tintColor = tintColor
+        case .view(let view):
+            imageView = view
         case .emoji(let character):
             let label = UILabel()
             label.text = String(character)
@@ -100,23 +110,35 @@ public class NativePopup: UIView {
         [self, effectView, imageView, titleLabel, messageLabel].forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
     }
 
-    private func show(duration: TimeInterval) {
-        let window = type(of: self).keyWindow
+    private func show(duration: TimeInterval, initialEffectType: InitialEffectType) {
         // MEMO: Need to remove?(iOS native popup doesn't remove previous popup)
         type(of: self).currentView?.removeFromSuperview()
         type(of: self).currentView = self
-        window.addSubview(self)
+        keyWindow.addSubview(self)
         widthAnchor.constraint(equalToConstant: 250).isActive = true
-        centerXAnchor.constraint(equalTo: window.centerXAnchor).isActive = true
+        centerXAnchor.constraint(equalTo: keyWindow.centerXAnchor).isActive = true
 
-        let defaultY = centerYAnchor.constraint(equalTo: window.centerYAnchor)
-        let initialY = topAnchor.constraint(equalTo: window.bottomAnchor)
+        let defaultY = centerYAnchor.constraint(equalTo: keyWindow.centerYAnchor)
+        let initialY = topAnchor.constraint(equalTo: keyWindow.bottomAnchor)
         initialY.isActive = true
         update(alpha: 0)
-        window.layoutIfNeeded()
+        keyWindow.layoutIfNeeded()
 
         initialY.isActive = false
         defaultY.isActive = true
+        switch initialEffectType {
+        case .fromBottom:
+            showWithFromBottom {
+                self.dismissAfter(duration: duration)
+            }
+        case .fadeIn:
+            showWithFadeIn {
+                self.dismissAfter(duration: duration)
+            }
+        }
+    }
+
+    private func showWithFromBottom(shown: @escaping (() -> ())) {
         // MEMO: Enhance animation(especially, animation curve)
         // MEMO: Refactor(resolve nest?)
         UIView.animate(withDuration: 0.3,
@@ -124,20 +146,37 @@ public class NativePopup: UIView {
                        options: UIViewAnimationOptions.curveEaseOut,
                        animations: {
                         self.update(alpha: 1)
-                        window.layoutIfNeeded()
+                        self.keyWindow.layoutIfNeeded()
         }, completion: { finished in
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + duration) {
-                UIView.animate(withDuration: 0.2,
-                               animations: {
-                                // for visual effecto view smooth animation
-                                self.update(alpha: 0)
-                                self.transform = self.transform.scaledBy(x: 0.8, y: 0.8)
-                },
-                               completion: { finished in
-                                self.removeFromSuperview()
-                })
-            }
+            shown()
         })
+    }
+
+    private func showWithFadeIn(shown: @escaping (() -> ())) {
+        update(alpha: 0)
+        transform = transform.scaledBy(x: 0.8, y: 0.8)
+        UIView.animate(withDuration: 0.2,
+                       animations: {
+                        self.update(alpha: 1)
+                        self.transform = CGAffineTransform.identity
+        },
+                       completion: {finished in
+                        shown()
+        })
+    }
+
+    private func dismissAfter(duration: TimeInterval) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + duration) {
+            UIView.animate(withDuration: 0.2,
+                           animations: {
+                            // for visual effecto view smooth animation
+                            self.update(alpha: 0)
+                            self.transform = self.transform.scaledBy(x: 0.8, y: 0.8)
+            },
+                           completion: { finished in
+                            self.removeFromSuperview()
+            })
+        }
     }
 
     private func update(alpha: CGFloat) {
