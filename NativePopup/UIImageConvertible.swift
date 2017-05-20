@@ -12,12 +12,13 @@ import UIKit
 public enum Image {
     case image(UIImage)
     case emoji(Character)
+    case view(UIView)
 
     func validate() {
         switch self {
         case .image(let image):
             assert(image.size.width == image.size.height, "Aspect ratio should be 1:1.")
-        case .emoji:
+        case .emoji, .view:
             // MEMO: should check?
             break
         }
@@ -26,6 +27,13 @@ public enum Image {
 
 public protocol ImageConvertible {
     var image: Image { get }
+    var additionalMarginTop: CGFloat { get }
+    var additionalMarginBottom: CGFloat { get }
+}
+
+extension ImageConvertible {
+    public var additionalMarginTop: CGFloat { return 0 }
+    public var additionalMarginBottom: CGFloat { return 0 }
 }
 
 extension UIImage: ImageConvertible {
@@ -34,4 +42,8 @@ extension UIImage: ImageConvertible {
 
 extension Character: ImageConvertible {
     public var image: Image { return .emoji(self) }
+}
+
+extension UIView: ImageConvertible {
+    public var image: Image { return .view(self) }
 }

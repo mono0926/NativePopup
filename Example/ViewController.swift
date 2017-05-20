@@ -19,17 +19,17 @@ class ViewController: UIViewController {
                          message: "フィードバックをありがとう\nございました。")
     }
     @IBAction func goodDidTap(_ sender: UIButton) {
-        NativePopup.show(image: NativePopup.Preset.Feedback.good,
+        NativePopup.show(image: Preset.Feedback.good,
                          title: "Helpful",
                          message: "Thanks for your feedback.")
     }
     @IBAction func badDidTap(_ sender: UIButton) {
-        NativePopup.show(image: NativePopup.Preset.Feedback.bad,
+        NativePopup.show(image: Preset.Feedback.bad,
                          title: "Not Helpful",
                          message: "Thanks for your feedback.")
     }
     @IBAction func emptyMessageDidTap(_ sender: UIButton) {
-        NativePopup.show(image: NativePopup.Preset.Feedback.good,
+        NativePopup.show(image: Preset.Feedback.good,
                          title: "Empty Message 🗑",
                          message: nil)
     }
@@ -43,6 +43,18 @@ class ViewController: UIViewController {
                          title: "10 seconds",
                          message: "Long duration🙇",
                          duration: 10)
+    }
+    @IBAction func fadeInDidTap(_ sender: UIButton) {
+        NativePopup.show(image: Preset.Feedback.good,
+                         title: "Helpful",
+                         message: "Thanks for your feedback.",
+                         initialEffectType: .fadeIn)
+    }
+    @IBAction func doneAnimatinDidTap(_ sender: UIButton) {
+        NativePopup.show(image: Preset.Native.done,
+                         title: "Added to Library",
+                         message: nil,
+                         initialEffectType: .fadeIn)
     }
 }
 
