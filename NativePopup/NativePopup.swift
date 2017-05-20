@@ -63,7 +63,7 @@ public class NativePopup: UIView {
 
         isUserInteractionEnabled = false
 
-        let tintColor = #colorLiteral(red: 0.3529411765, green: 0.3529411765, blue: 0.3529411765, alpha: 1)
+        tintColor = #colorLiteral(red: 0.3529411765, green: 0.3529411765, blue: 0.3529411765, alpha: 1)
         imageView.tintColor = tintColor
 
         let titleLabel = UILabel()

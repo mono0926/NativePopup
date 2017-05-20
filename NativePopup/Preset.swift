@@ -19,4 +19,16 @@ public struct Preset {
             return .image(UIImage(nativePopupNamed: "feedback_\(rawValue)"))
         }
     }
+
+    public enum Native: ImageConvertible {
+        case
+        done
+
+        public var image: Image {
+            switch self {
+            case .done:
+                return .view(AnimatableDoneView())
+            }
+        }
+    }
 }

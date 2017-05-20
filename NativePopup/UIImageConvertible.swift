@@ -36,3 +36,7 @@ extension UIImage: ImageConvertible {
 extension Character: ImageConvertible {
     public var image: Image { return .emoji(self) }
 }
+
+extension UIView: ImageConvertible {
+    public var image: Image { return .view(self) }
+}
