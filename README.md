@@ -65,7 +65,7 @@ NativePopup.show(image: Character("🔟"),
                     message: "Long duration🙇",
                     duration: 10)
 // Like Apple Music
-NativePopup.show(image: Preset.Native.done,
+NativePopup.show(image: Preset.Feedback.done,
                  title: "Added to Library",
                  message: nil,
                  initialEffectType: .fadeIn)
