@@ -8,33 +8,24 @@
 
 import Foundation
 
-class AnimatableDoneView: UIView, Animatable {
-    private var drawLayer: CAShapeLayer!
+class AnimatableDoneView: UIView, HasAnimatableLayer {
+
+    let animatableLayer = CAShapeLayer()
     override func layoutSubviews() {
         super.layoutSubviews()
+
         let path = UIBezierPath()
-        path.move(to: CGPoint(x: 10, y: 56))
-        path.addLine(to: CGPoint(x: 45, y: 88))
-        path.addLine(to: CGPoint(x: 106, y: 28))
+        path.move(to: CGPoint(x: 22, y: 59))
+        path.addLine(to: CGPoint(x: 53, y: 87))
+        path.addLine(to: CGPoint(x: 111, y: 28))
 
-        drawLayer = CAShapeLayer()
-        drawLayer.path = path.cgPath
-        drawLayer.fillColor = UIColor.clear.cgColor
-        drawLayer.strokeColor = tintColor.cgColor
-        drawLayer.lineWidth = 9
-        drawLayer.lineCap = kCALineCapRound
-        drawLayer.lineJoin = kCALineCapRound
-        drawLayer.strokeEnd = 0
-        layer.addSublayer(drawLayer)
-    }
-
-    func animate() {
-        let animation = CABasicAnimation(keyPath: "strokeEnd")
-        animation.duration = 0.3
-        animation.fromValue = 0
-        animation.toValue = 1
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        drawLayer.strokeEnd = 1
-        drawLayer.add(animation, forKey: "animation")
+        animatableLayer.path = path.cgPath
+        animatableLayer.fillColor = UIColor.clear.cgColor
+        animatableLayer.strokeColor = tintColor.cgColor
+        animatableLayer.lineWidth = 9
+        animatableLayer.lineCap = kCALineCapRound
+        animatableLayer.lineJoin = kCALineCapRound
+        animatableLayer.strokeEnd = 0
+        layer.addSublayer(animatableLayer)
     }
 }

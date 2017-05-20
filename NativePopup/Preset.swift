@@ -24,6 +24,9 @@ public struct Preset {
         case
         done
 
+        public var additionalMarginTop: CGFloat { return 31 }
+        public var additionalMarginBottom: CGFloat { return 18 }
+
         public var image: Image {
             switch self {
             case .done:

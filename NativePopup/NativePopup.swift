@@ -35,9 +35,9 @@ public class NativePopup: UIView {
                  message: String?) {
         effectView = UIVisualEffectView(effect: UIBlurEffect(style: .extraLight))
 
-        let image = image.image
-        image.validate()
-        switch image {
+        let imageValue = image.image
+        imageValue.validate()
+        switch imageValue {
         case .image(let image):
             imageView = UIImageView(image: image)
             imageView.contentMode = .scaleAspectFit
@@ -89,9 +89,9 @@ public class NativePopup: UIView {
 
         imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor, multiplier: 1).isActive = true
         imageView.heightAnchor.constraint(equalToConstant: 112).isActive = true
-        imageView.topAnchor.constraint(equalTo: topAnchor, constant: 32).isActive = true
+        imageView.topAnchor.constraint(equalTo: topAnchor, constant: 32 + image.additionalMarginTop).isActive = true
         imageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        imageView.bottomAnchor.constraint(equalTo: titleLabel.topAnchor, constant: -17).isActive = true
+        imageView.bottomAnchor.constraint(equalTo: titleLabel.topAnchor, constant: -(17 + image.additionalMarginBottom)).isActive = true
 
         let sideSpace: CGFloat = 8
         titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: sideSpace).isActive = true

@@ -27,6 +27,13 @@ public enum Image {
 
 public protocol ImageConvertible {
     var image: Image { get }
+    var additionalMarginTop: CGFloat { get }
+    var additionalMarginBottom: CGFloat { get }
+}
+
+extension ImageConvertible {
+    public var additionalMarginTop: CGFloat { return 0 }
+    public var additionalMarginBottom: CGFloat { return 0 }
 }
 
 extension UIImage: ImageConvertible {
