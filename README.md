@@ -37,11 +37,11 @@ Very simple to use NativePopup🐶
 
 ```swift
 // Good
-NativePopup.show(image: NativePopup.Preset.Feedback.good,
+NativePopup.show(image: Preset.Feedback.good,
                  title: "Helpful",
                  message: "Thanks for your feedback.")
 // Bad
-NativePopup.show(image: NativePopup.Preset.Feedback.bad,
+NativePopup.show(image: Preset.Feedback.bad,
                  title: "Not Helpful",
                  message: "Thanks for your feedback.")
 // Custom Image
@@ -53,7 +53,7 @@ NativePopup.show(image: Character("🐶"),
                  title: "イッヌ",
                  message: "絵文字対応したワン")
 // Title only
-NativePopup.show(image: NativePopup.Preset.Feedback.good,
+NativePopup.show(image: Preset.Feedback.good,
                  title: "Empty Message 🗑",
                  message: nil)
 // Custom duration (default duration is 1.5 seconds)
