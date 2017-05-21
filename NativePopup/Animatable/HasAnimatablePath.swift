@@ -10,9 +10,9 @@ import Foundation
 
 open class AnimatablePathView: UIView, HasAnimatableLayer {
     public let animatableLayer = CAShapeLayer()
-    open var path: UIBezierPath { return UIBezierPath() }
+    open var animatablePath: UIBezierPath { return UIBezierPath() }
     func setupLayer() {
-        let path = self.path
+        let path = self.animatablePath
         animatableLayer.path = path.cgPath
         animatableLayer.fillColor = UIColor.clear.cgColor
         animatableLayer.strokeColor = tintColor.cgColor
