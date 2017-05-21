@@ -24,68 +24,75 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hfa-GM-Q6d">
-                                <rect key="frame" x="0.0" y="0.0" width="110" height="240"/>
+                                <rect key="frame" x="0.0" y="0.0" width="113" height="270"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="BDZ-hc-dGd">
-                                    <rect key="frame" x="0.0" y="0.0" width="110" height="240"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="113" height="270"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1Qd-4G-b8f">
-                                            <rect key="frame" x="0.0" y="0.0" width="110" height="240"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="113" height="270"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXq-6g-Fy7">
-                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="30"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="113" height="30"/>
                                                     <state key="normal" title="Custom Image"/>
                                                     <connections>
                                                         <action selector="customDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q1J-q8-jEy"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zg-8M-9po">
-                                                    <rect key="frame" x="0.0" y="30" width="110" height="30"/>
+                                                    <rect key="frame" x="0.0" y="30" width="113" height="30"/>
                                                     <state key="normal" title="Good"/>
                                                     <connections>
                                                         <action selector="goodDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y6l-xd-3pS"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fw-rY-gmt">
-                                                    <rect key="frame" x="0.0" y="60" width="110" height="30"/>
+                                                    <rect key="frame" x="0.0" y="60" width="113" height="30"/>
                                                     <state key="normal" title="Bad"/>
                                                     <connections>
                                                         <action selector="badDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3HN-2P-cQG"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGk-f6-FDy">
-                                                    <rect key="frame" x="0.0" y="90" width="110" height="30"/>
+                                                    <rect key="frame" x="0.0" y="90" width="113" height="30"/>
                                                     <state key="normal" title="Empty Message"/>
                                                     <connections>
                                                         <action selector="emptyMessageDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5aC-RM-lb4"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Jg-tM-afe">
-                                                    <rect key="frame" x="0.0" y="120" width="110" height="30"/>
+                                                    <rect key="frame" x="0.0" y="120" width="113" height="30"/>
                                                     <state key="normal" title="Emoji"/>
                                                     <connections>
                                                         <action selector="emojiDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BgE-JD-noM"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxP-p0-yZR">
-                                                    <rect key="frame" x="0.0" y="150" width="110" height="30"/>
+                                                    <rect key="frame" x="0.0" y="150" width="113" height="30"/>
                                                     <state key="normal" title="10 seconds"/>
                                                     <connections>
                                                         <action selector="longDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jok-vX-ajz"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9m-dr-Kab">
-                                                    <rect key="frame" x="0.0" y="180" width="110" height="30"/>
+                                                    <rect key="frame" x="0.0" y="180" width="113" height="30"/>
                                                     <state key="normal" title="FadeIn"/>
                                                     <connections>
                                                         <action selector="fadeInDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fPD-YX-U6c"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIe-Qf-ugv">
-                                                    <rect key="frame" x="0.0" y="210" width="110" height="30"/>
+                                                    <rect key="frame" x="0.0" y="210" width="113" height="30"/>
                                                     <state key="normal" title="Done Animation"/>
                                                     <connections>
                                                         <action selector="doneAnimatinDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ivC-bu-MEk"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npQ-Jc-VDT">
+                                                    <rect key="frame" x="0.0" y="240" width="113" height="30"/>
+                                                    <state key="normal" title="Cross Animation"/>
+                                                    <connections>
+                                                        <action selector="crossAnimatinDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EE1-qa-Iox"/>
                                                     </connections>
                                                 </button>
                                             </subviews>

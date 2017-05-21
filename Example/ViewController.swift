@@ -56,5 +56,11 @@ class ViewController: UIViewController {
                          message: nil,
                          initialEffectType: .fadeIn)
     }
+    @IBAction func crossAnimatinDidTap(_ sender: UIButton) {
+        NativePopup.show(image: Preset.Feedback.cross,
+                         title: "Blocked!",
+                         message: nil,
+                         initialEffectType: .fadeIn)
+    }
 }
 

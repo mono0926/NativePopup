@@ -14,18 +14,19 @@ public struct Preset {
         case
         good,
         bad,
-        done
+        done,
+        cross
 
         public var additionalMarginTop: CGFloat {
             switch self {
             case .good, .bad: return 0
-            case .done: return 31
+            case .done, .cross: return 31
             }
         }
         public var additionalMarginBottom: CGFloat {
             switch self {
             case .good, .bad: return 0
-            case .done: return 18
+            case .done, .cross: return 18
             }
         }
 
@@ -35,6 +36,8 @@ public struct Preset {
                 return .image(UIImage(nativePopupNamed: "feedback_\(rawValue)"))
             case .done:
                 return .view(AnimatableDoneView())
+            case .cross:
+                return .view(AnimatableCrossView())
             }
         }
     }

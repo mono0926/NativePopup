@@ -10,4 +10,9 @@ import Foundation
 
 protocol Animatable {
     func animate()
+    var duration: TimeInterval { get }
+}
+
+extension Animatable {
+    var duration: TimeInterval { return 0.3 }
 }
