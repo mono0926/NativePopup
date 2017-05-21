@@ -112,7 +112,8 @@ public class NativePopup: UIView {
 
         if let animatable = imageView as? HasAnimatablePath {
             imageView.layoutIfNeeded()
-            animatable.setupLayer()
+            animatable.configureAnimatableLayer()
+            animatable.layer.addSublayer(animatable.animatableLayer)
         }
     }
 

@@ -64,3 +64,15 @@ class ViewController: UIViewController {
     }
 }
 
+class AnimatableDoneView2: UIView, HasAnimatablePath {
+    let animatableLayer = CAShapeLayer()
+    var animatablePath: UIBezierPath {
+        let length = frame.width
+        let path = UIBezierPath()
+        path.move(to: CGPoint(x: length * 0.196, y: length * 0.527))
+        path.addLine(to: CGPoint(x: length * 0.47, y: length * 0.777))
+        path.addLine(to: CGPoint(x: length * 0.99, y: length * 0.25))
+        return path
+    }
+}
+
