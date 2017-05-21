@@ -8,13 +8,10 @@
 
 import Foundation
 
-public protocol HasAnimatablePath: HasAnimatableLayer {
-    var path: UIBezierPath { get }
-    func setupLayer()
-}
-
-public extension HasAnimatablePath where Self: UIView {
-    public func setupLayer() {
+open class AnimatablePathView: UIView, HasAnimatableLayer {
+    public let animatableLayer = CAShapeLayer()
+    open var path: UIBezierPath { return UIBezierPath() }
+    func setupLayer() {
         animatableLayer.path = path.cgPath
         animatableLayer.fillColor = UIColor.clear.cgColor
         animatableLayer.strokeColor = tintColor.cgColor
