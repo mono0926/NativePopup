@@ -11,7 +11,7 @@ import Foundation
 class AnimatableCrossView: UIView, HasAnimatablePath {
     let animatableLayer = CAShapeLayer()
     var duration: TimeInterval { return 0.4 }
-    var path: UIBezierPath {
+    var animatablePath: UIBezierPath {
         let length = frame.width
         let path = UIBezierPath()
         path.move(to: CGPoint(x: length * 0.1, y: length * 0.1))

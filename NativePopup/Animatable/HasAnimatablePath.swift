@@ -9,13 +9,13 @@
 import Foundation
 
 public protocol HasAnimatablePath: HasAnimatableLayer {
-    var path: UIBezierPath { get }
+    var animatablePath: UIBezierPath { get }
     func setupLayer()
 }
 
 public extension HasAnimatablePath where Self: UIView {
     public func setupLayer() {
-        animatableLayer.path = path.cgPath
+        animatableLayer.path = animatablePath.cgPath
         animatableLayer.fillColor = UIColor.clear.cgColor
         animatableLayer.strokeColor = tintColor.cgColor
         animatableLayer.lineWidth = 9
