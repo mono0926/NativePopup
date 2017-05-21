@@ -12,6 +12,7 @@ open class AnimatablePathView: UIView, HasAnimatableLayer {
     public let animatableLayer = CAShapeLayer()
     open var path: UIBezierPath { return UIBezierPath() }
     func setupLayer() {
+        let path = self.path
         animatableLayer.path = path.cgPath
         animatableLayer.fillColor = UIColor.clear.cgColor
         animatableLayer.strokeColor = tintColor.cgColor
