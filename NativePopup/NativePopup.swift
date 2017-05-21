@@ -109,6 +109,11 @@ public class NativePopup: UIView {
         }
 
         [self, effectView, imageView, titleLabel, messageLabel].forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
+
+        if let animatable = imageView as? HasAnimatablePath {
+            imageView.layoutIfNeeded()
+            animatable.setupLayer()
+        }
     }
 
     private func show(duration: TimeInterval, initialEffectType: InitialEffectType) {

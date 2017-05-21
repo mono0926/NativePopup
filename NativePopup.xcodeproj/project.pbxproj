@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FE4CECF61ED1171400D5DB31 /* AnimatableCrossView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CECF51ED1171400D5DB31 /* AnimatableCrossView.swift */; };
+		FE4CECF81ED119F800D5DB31 /* HasAnimatablePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CECF71ED119F800D5DB31 /* HasAnimatablePath.swift */; };
 		FE8533901EAC7C92004BB756 /* NativePopup.h in Headers */ = {isa = PBXBuildFile; fileRef = FE85338E1EAC7C92004BB756 /* NativePopup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FEB0316D1ECFF6770039A1C6 /* Preset.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB0316C1ECFF6770039A1C6 /* Preset.swift */; };
 		FEB031711ECFF6A30039A1C6 /* Bundle.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB031701ECFF6A30039A1C6 /* Bundle.extension.swift */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		FE4CECF51ED1171400D5DB31 /* AnimatableCrossView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableCrossView.swift; sourceTree = "<group>"; };
+		FE4CECF71ED119F800D5DB31 /* HasAnimatablePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HasAnimatablePath.swift; sourceTree = "<group>"; };
 		FE85338B1EAC7C92004BB756 /* NativePopup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NativePopup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE85338E1EAC7C92004BB756 /* NativePopup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NativePopup.h; sourceTree = "<group>"; };
 		FE85338F1EAC7C92004BB756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -129,9 +131,10 @@
 				FEB0316C1ECFF6770039A1C6 /* Preset.swift */,
 				FEB031721ECFF6E00039A1C6 /* InitialEffectType.swift */,
 				FEB031741ECFFB6C0039A1C6 /* Animatable.swift */,
-				FEB031761ECFFE120039A1C6 /* AnimatableDoneView.swift */,
 				FEB031781ED014D70039A1C6 /* HasAnimatableLayer.swift */,
+				FEB031761ECFFE120039A1C6 /* AnimatableDoneView.swift */,
 				FE4CECF51ED1171400D5DB31 /* AnimatableCrossView.swift */,
+				FE4CECF71ED119F800D5DB31 /* HasAnimatablePath.swift */,
 			);
 			path = NativePopup;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				FEB031791ED014D70039A1C6 /* HasAnimatableLayer.swift in Sources */,
 				FEB031751ECFFB6C0039A1C6 /* Animatable.swift in Sources */,
 				FECA87E31EACC7F000D07CB1 /* UIImageConvertible.swift in Sources */,
+				FE4CECF81ED119F800D5DB31 /* HasAnimatablePath.swift in Sources */,
 				FECA87F21EADBA3C00D07CB1 /* Extension.swift in Sources */,
 				FECA87D81EAC7D9E00D07CB1 /* NativePopup.swift in Sources */,
 				FEB0316D1ECFF6770039A1C6 /* Preset.swift in Sources */,
