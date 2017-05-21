@@ -8,14 +8,11 @@
 
 import Foundation
 
-public protocol HasAnimatablePath: HasAnimatableLayer {
-    var path: UIBezierPath { get }
-    func setupLayer()
-}
-
-public extension HasAnimatablePath where Self: UIView {
-    public func setupLayer() {
-        animatableLayer.path = path.cgPath
+open class AnimatablePathView: UIView, HasAnimatableLayer {
+    let animatableLayer = CAShapeLayer()
+    open var animatablePath: UIBezierPath { fatalError("Should be overridden.") }
+    func setupLayer() {
+        animatableLayer.path = animatablePath.cgPath
         animatableLayer.fillColor = UIColor.clear.cgColor
         animatableLayer.strokeColor = tintColor.cgColor
         animatableLayer.lineWidth = 9
