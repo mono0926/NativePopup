@@ -8,8 +8,9 @@
 
 import Foundation
 
-class AnimatableDoneView: AnimatablePathView {
-    override var animatablePath: UIBezierPath {
+class AnimatableDoneView: UIView, HasAnimatablePath {
+    let animatableLayer = CAShapeLayer()
+    var animatablePath: UIBezierPath {
         let length = frame.width
         let path = UIBezierPath()
         path.move(to: CGPoint(x: length * 0.196, y: length * 0.527))

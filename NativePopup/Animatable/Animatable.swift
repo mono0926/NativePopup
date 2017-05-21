@@ -8,11 +8,10 @@
 
 import Foundation
 
-protocol Animatable {
+public protocol Animatable {
     func animate()
-    var duration: TimeInterval { get }
 }
 
-extension Animatable {
+public extension Animatable {
     var duration: TimeInterval { return 0.3 }
 }

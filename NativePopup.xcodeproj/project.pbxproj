@@ -8,14 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		FE4CECF61ED1171400D5DB31 /* AnimatableCrossView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CECF51ED1171400D5DB31 /* AnimatableCrossView.swift */; };
-		FE4CECF81ED119F800D5DB31 /* HasAnimatablePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CECF71ED119F800D5DB31 /* HasAnimatablePath.swift */; };
 		FE8533901EAC7C92004BB756 /* NativePopup.h in Headers */ = {isa = PBXBuildFile; fileRef = FE85338E1EAC7C92004BB756 /* NativePopup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FEB0316D1ECFF6770039A1C6 /* Preset.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB0316C1ECFF6770039A1C6 /* Preset.swift */; };
 		FEB031711ECFF6A30039A1C6 /* Bundle.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB031701ECFF6A30039A1C6 /* Bundle.extension.swift */; };
 		FEB031731ECFF6E00039A1C6 /* InitialEffectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB031721ECFF6E00039A1C6 /* InitialEffectType.swift */; };
 		FEB031751ECFFB6C0039A1C6 /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB031741ECFFB6C0039A1C6 /* Animatable.swift */; };
 		FEB031771ECFFE120039A1C6 /* AnimatableDoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB031761ECFFE120039A1C6 /* AnimatableDoneView.swift */; };
-		FEB031791ED014D70039A1C6 /* HasAnimatableLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB031781ED014D70039A1C6 /* HasAnimatableLayer.swift */; };
+		FEB031791ED014D70039A1C6 /* HasAnimatablePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB031781ED014D70039A1C6 /* HasAnimatablePath.swift */; };
 		FECA87BA1EAC7CCF00D07CB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA87B91EAC7CCF00D07CB1 /* AppDelegate.swift */; };
 		FECA87BC1EAC7CCF00D07CB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA87BB1EAC7CCF00D07CB1 /* ViewController.swift */; };
 		FECA87BF1EAC7CCF00D07CB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FECA87BD1EAC7CCF00D07CB1 /* Main.storyboard */; };
@@ -57,7 +56,6 @@
 
 /* Begin PBXFileReference section */
 		FE4CECF51ED1171400D5DB31 /* AnimatableCrossView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableCrossView.swift; sourceTree = "<group>"; };
-		FE4CECF71ED119F800D5DB31 /* HasAnimatablePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HasAnimatablePath.swift; sourceTree = "<group>"; };
 		FE85338B1EAC7C92004BB756 /* NativePopup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NativePopup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE85338E1EAC7C92004BB756 /* NativePopup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NativePopup.h; sourceTree = "<group>"; };
 		FE85338F1EAC7C92004BB756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,7 +64,7 @@
 		FEB031721ECFF6E00039A1C6 /* InitialEffectType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialEffectType.swift; sourceTree = "<group>"; };
 		FEB031741ECFFB6C0039A1C6 /* Animatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animatable.swift; sourceTree = "<group>"; };
 		FEB031761ECFFE120039A1C6 /* AnimatableDoneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableDoneView.swift; sourceTree = "<group>"; };
-		FEB031781ED014D70039A1C6 /* HasAnimatableLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HasAnimatableLayer.swift; sourceTree = "<group>"; };
+		FEB031781ED014D70039A1C6 /* HasAnimatablePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HasAnimatablePath.swift; sourceTree = "<group>"; };
 		FECA87B71EAC7CCF00D07CB1 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FECA87B91EAC7CCF00D07CB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FECA87BB1EAC7CCF00D07CB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,8 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				FEB031741ECFFB6C0039A1C6 /* Animatable.swift */,
-				FEB031781ED014D70039A1C6 /* HasAnimatableLayer.swift */,
-				FE4CECF71ED119F800D5DB31 /* HasAnimatablePath.swift */,
+				FEB031781ED014D70039A1C6 /* HasAnimatablePath.swift */,
 				FE4CECF51ED1171400D5DB31 /* AnimatableCrossView.swift */,
 				FEB031761ECFFE120039A1C6 /* AnimatableDoneView.swift */,
 			);
@@ -293,10 +290,9 @@
 				FEB031711ECFF6A30039A1C6 /* Bundle.extension.swift in Sources */,
 				FEB031731ECFF6E00039A1C6 /* InitialEffectType.swift in Sources */,
 				FEB031771ECFFE120039A1C6 /* AnimatableDoneView.swift in Sources */,
-				FEB031791ED014D70039A1C6 /* HasAnimatableLayer.swift in Sources */,
+				FEB031791ED014D70039A1C6 /* HasAnimatablePath.swift in Sources */,
 				FEB031751ECFFB6C0039A1C6 /* Animatable.swift in Sources */,
 				FECA87E31EACC7F000D07CB1 /* UIImageConvertible.swift in Sources */,
-				FE4CECF81ED119F800D5DB31 /* HasAnimatablePath.swift in Sources */,
 				FECA87F21EADBA3C00D07CB1 /* Extension.swift in Sources */,
 				FECA87D81EAC7D9E00D07CB1 /* NativePopup.swift in Sources */,
 				FEB0316D1ECFF6770039A1C6 /* Preset.swift in Sources */,
