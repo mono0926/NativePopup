@@ -110,7 +110,7 @@ public class NativePopup: UIView {
 
         [self, effectView, imageView, titleLabel, messageLabel].forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
 
-        if let animatable = imageView as? AnimatablePathView {
+        if let animatable = imageView as? HasAnimatablePath {
             imageView.layoutIfNeeded()
             animatable.setupLayer()
         }

@@ -8,12 +8,12 @@
 
 import Foundation
 
-protocol HasAnimatableLayer: Animatable {
+public protocol HasAnimatableLayer: Animatable {
     var animatableLayer: CAShapeLayer { get }
 }
 
-extension HasAnimatableLayer {
-    func animate() {
+public extension HasAnimatableLayer {
+    public func animate() {
         let animation = CABasicAnimation(keyPath: "strokeEnd")
         animation.duration = duration
         animation.fromValue = 0
