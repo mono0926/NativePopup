@@ -101,6 +101,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE4CECF91ED11A5500D5DB31 /* Animatable */ = {
+			isa = PBXGroup;
+			children = (
+				FEB031741ECFFB6C0039A1C6 /* Animatable.swift */,
+				FE4CECF51ED1171400D5DB31 /* AnimatableCrossView.swift */,
+				FEB031761ECFFE120039A1C6 /* AnimatableDoneView.swift */,
+				FEB031781ED014D70039A1C6 /* HasAnimatableLayer.swift */,
+				FE4CECF71ED119F800D5DB31 /* HasAnimatablePath.swift */,
+			);
+			name = Animatable;
+			path = Animatable;
+			sourceTree = "<group>";
+		};
 		FE8533811EAC7C92004BB756 = {
 			isa = PBXGroup;
 			children = (
@@ -122,19 +135,15 @@
 		FE85338D1EAC7C92004BB756 /* NativePopup */ = {
 			isa = PBXGroup;
 			children = (
+				FE4CECF91ED11A5500D5DB31 /* Animatable */,
 				FECA87F31EADBC2500D07CB1 /* Extensions */,
 				FECA87DE1EAC94B300D07CB1 /* Assets.xcassets */,
 				FE85338F1EAC7C92004BB756 /* Info.plist */,
+				FEB031721ECFF6E00039A1C6 /* InitialEffectType.swift */,
 				FE85338E1EAC7C92004BB756 /* NativePopup.h */,
 				FECA87D71EAC7D9E00D07CB1 /* NativePopup.swift */,
-				FECA87E21EACC7F000D07CB1 /* UIImageConvertible.swift */,
 				FEB0316C1ECFF6770039A1C6 /* Preset.swift */,
-				FEB031721ECFF6E00039A1C6 /* InitialEffectType.swift */,
-				FEB031741ECFFB6C0039A1C6 /* Animatable.swift */,
-				FEB031781ED014D70039A1C6 /* HasAnimatableLayer.swift */,
-				FEB031761ECFFE120039A1C6 /* AnimatableDoneView.swift */,
-				FE4CECF51ED1171400D5DB31 /* AnimatableCrossView.swift */,
-				FE4CECF71ED119F800D5DB31 /* HasAnimatablePath.swift */,
+				FECA87E21EACC7F000D07CB1 /* UIImageConvertible.swift */,
 			);
 			path = NativePopup;
 			sourceTree = "<group>";
@@ -155,8 +164,8 @@
 		FECA87F31EADBC2500D07CB1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				FECA87F11EADBA3C00D07CB1 /* Extension.swift */,
 				FEB031701ECFF6A30039A1C6 /* Bundle.extension.swift */,
+				FECA87F11EADBA3C00D07CB1 /* Extension.swift */,
 				FECA87F41EADBD7F00D07CB1 /* UIImage.extension.swift */,
 				FECA87EF1EADB80700D07CB1 /* UIView.extension.swift */,
 			);
