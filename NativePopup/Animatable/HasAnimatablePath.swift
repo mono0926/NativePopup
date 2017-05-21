@@ -10,7 +10,7 @@ import Foundation
 
 open class AnimatablePathView: UIView, HasAnimatableLayer {
     public let animatableLayer = CAShapeLayer()
-    open var animatablePath: UIBezierPath { return UIBezierPath() }
+    open var animatablePath: UIBezierPath { fatalError("Should be overridden.") }
     func setupLayer() {
         let path = self.animatablePath
         animatableLayer.path = path.cgPath
