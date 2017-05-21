@@ -14,10 +14,11 @@ class AnimatableDoneView: UIView, HasAnimatableLayer {
     override func layoutSubviews() {
         super.layoutSubviews()
 
+        let length = frame.width
         let path = UIBezierPath()
-        path.move(to: CGPoint(x: 22, y: 59))
-        path.addLine(to: CGPoint(x: 53, y: 87))
-        path.addLine(to: CGPoint(x: 111, y: 28))
+        path.move(to: CGPoint(x: length * 0.196, y: length * 0.527))
+        path.addLine(to: CGPoint(x: length * 0.47, y: length * 0.777))
+        path.addLine(to: CGPoint(x: length * 0.99, y: length * 0.25))
 
         animatableLayer.path = path.cgPath
         animatableLayer.fillColor = UIColor.clear.cgColor
