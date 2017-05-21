@@ -105,12 +105,11 @@
 			isa = PBXGroup;
 			children = (
 				FEB031741ECFFB6C0039A1C6 /* Animatable.swift */,
-				FE4CECF51ED1171400D5DB31 /* AnimatableCrossView.swift */,
-				FEB031761ECFFE120039A1C6 /* AnimatableDoneView.swift */,
 				FEB031781ED014D70039A1C6 /* HasAnimatableLayer.swift */,
 				FE4CECF71ED119F800D5DB31 /* HasAnimatablePath.swift */,
+				FE4CECF51ED1171400D5DB31 /* AnimatableCrossView.swift */,
+				FEB031761ECFFE120039A1C6 /* AnimatableDoneView.swift */,
 			);
-			name = Animatable;
 			path = Animatable;
 			sourceTree = "<group>";
 		};
