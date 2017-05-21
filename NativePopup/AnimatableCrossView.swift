@@ -21,8 +21,8 @@ class AnimatableCrossView: UIView, HasAnimatableLayer {
         let path = UIBezierPath()
         path.move(to: CGPoint(x: length * 0.1, y: length * 0.1))
         path.addLine(to: CGPoint(x: length * 0.9, y: length * 0.9))
-        path.move(to: CGPoint(x: length * 0.1, y: length * 0.9))
-        path.addLine(to: CGPoint(x: length * 0.9, y: length * 0.1))
+        path.move(to: CGPoint(x: length * 0.9, y: length * 0.1))
+        path.addLine(to: CGPoint(x: length * 0.1, y: length * 0.9))
 
         animatableLayer.path = path.cgPath
         animatableLayer.fillColor = UIColor.clear.cgColor
