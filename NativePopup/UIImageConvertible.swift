@@ -26,7 +26,7 @@ public enum Image {
 }
 
 public protocol ImageConvertible {
-    var image: Image { get }
+    var npImage: Image { get }
     var additionalMarginTop: CGFloat { get }
     var additionalMarginBottom: CGFloat { get }
 }
@@ -37,13 +37,13 @@ extension ImageConvertible {
 }
 
 extension UIImage: ImageConvertible {
-    public var image: Image { return .image(self) }
+    public var npImage: Image { return .image(self) }
 }
 
 extension Character: ImageConvertible {
-    public var image: Image { return .emoji(self) }
+    public var npImage: Image { return .emoji(self) }
 }
 
 extension UIView: ImageConvertible {
-    public var image: Image { return .view(self) }
+    public var npImage: Image { return .view(self) }
 }

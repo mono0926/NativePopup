@@ -30,7 +30,7 @@ public struct Preset {
             }
         }
 
-        public var image: Image {
+        public var npImage: Image {
             switch self {
             case .good, .bad:
                 return .image(UIImage(nativePopupNamed: "feedback_\(rawValue)"))
