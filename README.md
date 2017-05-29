@@ -91,7 +91,7 @@ public enum Image {
 }
 
 public protocol ImageConvertible {
-    var image: Image { get }
+    var npImage: Image { get }
 }
 ```
 
@@ -99,11 +99,11 @@ public protocol ImageConvertible {
 
 ```swift
 extension UIImage: ImageConvertible {
-    public var image: Image { return .image(self) }
+    public var npImage: Image { return .image(self) }
 }
 
 extension Character: ImageConvertible {
-    public var image: Image { return .emoji(self) }
+    public var npImage: Image { return .emoji(self) }
 }
 ```
 
@@ -118,7 +118,7 @@ extension NativePopup {
             good,
             bad
 
-            public var image: Image {
+            public var npImage: Image {
                 return .image(UIImage.init(nativePopupNamed: "feedback_\(rawValue)"))
             }
         }
