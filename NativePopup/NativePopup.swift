@@ -15,7 +15,7 @@ public class NativePopup: UIView {
     private let effectView: UIVisualEffectView
     private let imageView: UIView
 
-    public class func show(image: ImageConvertible,
+    public static func show(image: ImageConvertible,
                             title: String,
                             message: String?,
                             duration: TimeInterval = 1.5,
