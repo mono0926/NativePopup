@@ -93,7 +93,7 @@ public class NativePopup: UIView {
         imageContentView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         imageContentView.bottomAnchor.constraint(equalTo: titleLabel.topAnchor, constant: -(17 + image.additionalMarginBottom)).isActive = true
 
-        let sideSpace: CGFloat = 8
+        let sideSpace: CGFloat = 16
         titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: sideSpace).isActive = true
         titleLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -sideSpace).isActive = true
 
