@@ -16,7 +16,7 @@ public class NativePopup: UIView {
     private let imageContentView: UIView
 
     public static func show(image: ImageConvertible,
-                            title: String,
+                            title: String?,
                             message: String?,
                             duration: TimeInterval = 1.5,
                             initialEffectType: InitialEffectType = .fromBottom) {
@@ -31,7 +31,7 @@ public class NativePopup: UIView {
     }
 
     private init(image: ImageConvertible,
-                 title: String,
+                 title: String?,
                  message: String?) {
         effectView = UIVisualEffectView(effect: UIBlurEffect(style: .extraLight))
 
