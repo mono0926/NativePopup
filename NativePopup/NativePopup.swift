@@ -13,7 +13,7 @@ public class NativePopup: UIView {
     private let keyWindow = UIApplication.shared.keyWindow!
     fileprivate weak static var currentView: NativePopup?
     private let effectView: UIVisualEffectView
-    private let imageView: UIView
+    private let imageContentView: UIView
 
     public static func show(image: ImageConvertible,
                             title: String,
@@ -39,20 +39,20 @@ public class NativePopup: UIView {
         imageValue.validate()
         switch imageValue {
         case .image(let image):
-            imageView = UIImageView(image: image)
-            imageView.contentMode = .scaleAspectFit
-            imageView.layer.cornerRadius = 6
-            imageView.clipsToBounds = true
+            imageContentView = UIImageView(image: image)
+            imageContentView.contentMode = .scaleAspectFit
+            imageContentView.layer.cornerRadius = 6
+            imageContentView.clipsToBounds = true
         case .view(let view):
-            imageView = view
+            imageContentView = view
         case .emoji(let character):
             let label = UILabel()
             label.text = String(character)
             label.font = UIFont.systemFont(ofSize: 120)
             label.textAlignment = .center
-            imageView = UIView()
-            imageView.np.addSubviewCenter(label)
-            imageView.clipsToBounds = false
+            imageContentView = UIView()
+            imageContentView.np.addSubviewCenter(label)
+            imageContentView.clipsToBounds = false
         }
 
         super.init(frame: CGRect.zero)
@@ -64,7 +64,7 @@ public class NativePopup: UIView {
         isUserInteractionEnabled = false
 
         tintColor = #colorLiteral(red: 0.3529411765, green: 0.3529411765, blue: 0.3529411765, alpha: 1)
-        imageView.tintColor = tintColor
+        imageContentView.tintColor = tintColor
 
         let titleLabel = UILabel()
         titleLabel.text = title
@@ -84,14 +84,14 @@ public class NativePopup: UIView {
             $0.attributedText = NSAttributedString(string: $0.text ?? "", attributes: [NSParagraphStyleAttributeName: style])
         }
 
-        effectView.addSubview(imageView)
+        effectView.addSubview(imageContentView)
         effectView.addSubview(titleLabel)
 
-        imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor, multiplier: 1).isActive = true
-        imageView.heightAnchor.constraint(equalToConstant: 112).isActive = true
-        imageView.topAnchor.constraint(equalTo: topAnchor, constant: 32 + image.additionalMarginTop).isActive = true
-        imageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        imageView.bottomAnchor.constraint(equalTo: titleLabel.topAnchor, constant: -(17 + image.additionalMarginBottom)).isActive = true
+        imageContentView.heightAnchor.constraint(equalTo: imageContentView.widthAnchor, multiplier: 1).isActive = true
+        imageContentView.heightAnchor.constraint(equalToConstant: 112).isActive = true
+        imageContentView.topAnchor.constraint(equalTo: topAnchor, constant: 32 + image.additionalMarginTop).isActive = true
+        imageContentView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        imageContentView.bottomAnchor.constraint(equalTo: titleLabel.topAnchor, constant: -(17 + image.additionalMarginBottom)).isActive = true
 
         let sideSpace: CGFloat = 8
         titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: sideSpace).isActive = true
@@ -108,10 +108,10 @@ public class NativePopup: UIView {
             messageLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -bottomSpace).isActive = true
         }
 
-        [self, effectView, imageView, titleLabel, messageLabel].forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
+        [self, effectView, imageContentView, titleLabel, messageLabel].forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
 
-        if let animatable = imageView as? HasAnimatablePath {
-            imageView.layoutIfNeeded()
+        if let animatable = imageContentView as? HasAnimatablePath {
+            imageContentView.layoutIfNeeded()
             animatable.configureAnimatableLayer()
             animatable.layer.addSublayer(animatable.animatableLayer)
         }
@@ -173,7 +173,7 @@ public class NativePopup: UIView {
     }
 
     private func dismissAfter(duration: TimeInterval) {
-        if let animatable = imageView as? Animatable {
+        if let animatable = imageContentView as? Animatable {
             animatable.animate()
         }
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + duration) {
