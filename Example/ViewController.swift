@@ -33,6 +33,11 @@ class ViewController: UIViewController {
                          title: "Empty Message 🗑",
                          message: nil)
     }
+    @IBAction func emptyTitleDidTap(_ sender: UIButton) {
+        NativePopup.show(image: Preset.Feedback.good,
+                         title: nil,
+                         message: "Empty Title 🗑")
+    }
     @IBAction func emojiDidTap(_ sender: UIButton) {
         NativePopup.show(image: Character("🐶"),
                          title: "イッヌ",

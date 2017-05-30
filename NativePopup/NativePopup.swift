@@ -16,7 +16,7 @@ public class NativePopup: UIView {
     private let imageContentView: UIView
 
     public static func show(image: ImageConvertible,
-                            title: String,
+                            title: String?,
                             message: String?,
                             duration: TimeInterval = 1.5,
                             initialEffectType: InitialEffectType = .fromBottom) {
@@ -31,7 +31,7 @@ public class NativePopup: UIView {
     }
 
     private init(image: ImageConvertible,
-                 title: String,
+                 title: String?,
                  message: String?) {
         effectView = UIVisualEffectView(effect: UIBlurEffect(style: .extraLight))
 
@@ -93,7 +93,7 @@ public class NativePopup: UIView {
         imageContentView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         imageContentView.bottomAnchor.constraint(equalTo: titleLabel.topAnchor, constant: -(17 + image.additionalMarginBottom)).isActive = true
 
-        let sideSpace: CGFloat = 8
+        let sideSpace: CGFloat = 16
         titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: sideSpace).isActive = true
         titleLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -sideSpace).isActive = true
 
