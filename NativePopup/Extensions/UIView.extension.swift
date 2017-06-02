@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-extension UIView: ExtensionCompatible { }
+extension UIView: NativePopupCompatible { }
 
-extension Extension where Base: UIView {
+extension NativePopupExtension where Base: UIView {
     func addSubview(_ view: UIView, insets: UIEdgeInsets = .zero) {
         view.translatesAutoresizingMaskIntoConstraints = false
         base.addSubview(view)

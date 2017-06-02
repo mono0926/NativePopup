@@ -8,25 +8,25 @@
 
 import Foundation
 
-struct Extension<Base> {
+struct NativePopupExtension<Base> {
     let base: Base
     init (_ base: Base) {
         self.base = base
     }
 }
 
-protocol ExtensionCompatible {
+protocol NativePopupCompatible {
     associatedtype Compatible
-    static var np: Extension<Compatible>.Type { get }
-    var np: Extension<Compatible> { get }
+    static var np: NativePopupExtension<Compatible>.Type { get }
+    var np: NativePopupExtension<Compatible> { get }
 }
 
-extension ExtensionCompatible {
-    static var np: Extension<Self>.Type {
-        return Extension<Self>.self
+extension NativePopupCompatible {
+    static var np: NativePopupExtension<Self>.Type {
+        return NativePopupExtension<Self>.self
     }
 
-    var np: Extension<Self> {
-        return Extension(self)
+    var np: NativePopupExtension<Self> {
+        return NativePopupExtension(self)
     }
 }
