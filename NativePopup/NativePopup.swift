@@ -48,11 +48,9 @@ public class NativePopup: UIView {
         case .emoji(let character):
             let label = UILabel()
             label.text = String(character)
-            label.font = UIFont.systemFont(ofSize: 120)
+            label.font = UIFont.systemFont(ofSize: 72)
             label.textAlignment = .center
-            imageContentView = UIView()
-            imageContentView.np.addSubviewCenter(label)
-            imageContentView.clipsToBounds = false
+            imageContentView = label
         }
 
         super.init(frame: CGRect.zero)
