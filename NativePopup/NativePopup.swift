@@ -82,8 +82,8 @@ public class NativePopup: UIView {
             $0.attributedText = NSAttributedString(string: $0.text ?? "", attributes: [.paragraphStyle: style])
         }
 
-        effectView.addSubview(imageContentView)
-        effectView.addSubview(titleLabel)
+        effectView.contentView.addSubview(imageContentView)
+        effectView.contentView.addSubview(titleLabel)
 
         imageContentView.heightAnchor.constraint(equalTo: imageContentView.widthAnchor, multiplier: 1).isActive = true
         imageContentView.heightAnchor.constraint(equalToConstant: 112).isActive = true
@@ -99,7 +99,7 @@ public class NativePopup: UIView {
         if message?.isEmpty ?? true {
             titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -bottomSpace).isActive = true
         } else {
-            effectView.addSubview(messageLabel)
+            effectView.contentView.addSubview(messageLabel)
             titleLabel.bottomAnchor.constraint(equalTo: messageLabel.topAnchor, constant: -6).isActive = true
             messageLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: sideSpace).isActive = true
             messageLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -sideSpace).isActive = true
