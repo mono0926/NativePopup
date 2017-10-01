@@ -79,7 +79,7 @@ public class NativePopup: UIView {
             let style = NSMutableParagraphStyle()
             style.lineSpacing = 3
             style.alignment = .center
-            $0.attributedText = NSAttributedString(string: $0.text ?? "", attributes: [NSParagraphStyleAttributeName: style])
+            $0.attributedText = NSAttributedString(string: $0.text ?? "", attributes: [.paragraphStyle: style])
         }
 
         effectView.addSubview(imageContentView)
