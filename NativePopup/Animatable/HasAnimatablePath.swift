@@ -22,7 +22,7 @@ public extension HasAnimatablePath {
         animation.duration = duration
         animation.fromValue = 0
         animation.toValue = 1
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        animation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
         animatableLayer.strokeEnd = 1
         animatableLayer.add(animation, forKey: "animation")
     }
@@ -31,8 +31,8 @@ public extension HasAnimatablePath {
         animatableLayer.fillColor = UIColor.clear.cgColor
         animatableLayer.strokeColor = tintColor?.cgColor
         animatableLayer.lineWidth = 9
-        animatableLayer.lineCap = kCALineCapRound
-        animatableLayer.lineJoin = kCALineCapRound
+        animatableLayer.lineCap = .round
+        animatableLayer.lineJoin = .round
         animatableLayer.strokeEnd = 0
     }
 }

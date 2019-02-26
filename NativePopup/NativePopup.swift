@@ -148,7 +148,7 @@ public class NativePopup: UIView {
         // MEMO: Refactor(resolve nest?)
         UIView.animate(withDuration: 0.3,
                        delay: 0,
-                       options: UIViewAnimationOptions.curveEaseOut,
+                       options: .curveEaseOut,
                        animations: {
                         self.update(alpha: 1)
                         self.keyWindow.layoutIfNeeded()
