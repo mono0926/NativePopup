@@ -17,7 +17,7 @@ public protocol HasAnimatablePath: Animatable {
 }
 
 public extension HasAnimatablePath {
-    public func animate() {
+    func animate() {
         let animation = CABasicAnimation(keyPath: "strokeEnd")
         animation.duration = duration
         animation.fromValue = 0
@@ -26,7 +26,7 @@ public extension HasAnimatablePath {
         animatableLayer.strokeEnd = 1
         animatableLayer.add(animation, forKey: "animation")
     }
-    public func configureAnimatableLayer() {
+    func configureAnimatableLayer() {
         animatableLayer.path = animatablePath.cgPath
         animatableLayer.fillColor = UIColor.clear.cgColor
         animatableLayer.strokeColor = tintColor?.cgColor
