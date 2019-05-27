@@ -3,7 +3,7 @@
 ![platforms](https://img.shields.io/badge/platforms-iOS-333333.svg)
 [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/mono0926/NativePopup/master/LICENSE)
 [![Support Carthage and CocoaPods](https://img.shields.io/badge/supports-CocoaPods%2C%20Carthage-green.svg)](https://github.com/Carthage/Carthage)
-[![Language: Swift](https://img.shields.io/badge/swift-3.1-4BC51D.svg?style=flat)](https://developer.apple.com/swift)
+[![Language: Swift](https://img.shields.io/badge/swift-5.0-4BC51D.svg?style=flat)](https://developer.apple.com/swift)
 
 `NativePopup` is clone of Apple iOS AppStore review feedback popup.
 
