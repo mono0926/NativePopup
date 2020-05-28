@@ -33,7 +33,12 @@ public class NativePopup: UIView {
     private init(image: ImageConvertible,
                  title: String?,
                  message: String?) {
-        effectView = UIVisualEffectView(effect: UIBlurEffect(style: .extraLight))
+        if #available(iOS 13.0, *) {
+            effectView = UIVisualEffectView(effect: UIBlurEffect(style: .systemThinMaterial))
+        }
+        else {
+            effectView = UIVisualEffectView(effect: UIBlurEffect(style: .extraLight))
+        }
 
         let imageValue = image.npImage
         imageValue.validate()
@@ -61,7 +66,12 @@ public class NativePopup: UIView {
 
         isUserInteractionEnabled = false
 
-        tintColor = #colorLiteral(red: 0.3529411765, green: 0.3529411765, blue: 0.3529411765, alpha: 1)
+        if #available(iOS 13, *), self.traitCollection.userInterfaceStyle == .dark {
+            tintColor = #colorLiteral(red: 0.9490196078, green: 0.9490196078, blue: 0.968627451, alpha: 1)
+        }
+        else {
+            tintColor = #colorLiteral(red: 0.3529411765, green: 0.3529411765, blue: 0.3529411765, alpha: 1)
+        }
         imageContentView.tintColor = tintColor
 
         let titleLabel = UILabel()
