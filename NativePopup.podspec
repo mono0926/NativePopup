@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "NativePopup"
-  s.version      = "2.0.1"
+  s.version      = "2.1.0"
   s.summary      = "Clone of Apple iOS App's feedback popup, and easily customizable."
   s.homepage     = "https://github.com/mono0926/NativePopup"
   s.license      = { :type => "MIT", :file => "LICENSE" }
